@@ -1,6 +1,8 @@
 <?php
 
 require_once ('define.inc.php');
+require_once ('list_brawlers.php');
+require_once ('list_mode.php');
     
 function affichageProfil($modifs){
     
@@ -67,26 +69,21 @@ function affichageProfil($modifs){
         echo("<h3>Votre BrawlTag :<input type='text' value='$Brawlname' name='Bname'>  </h3> <br>");
         echo("<h3>Votre Mot de Passe :<input type='text' value='$Password' name='mdp'>  </h3> <br>");
         echo("<h3>Votre Mail :$Mail </h3> <br>");
-        echo("<h3>Votre ID :'<input type='text' value='$Id' name='nom'></h3> <br>");
+        echo("<h3>Votre ID :<input type='text' value='$Id' name='nom'></h3> <br>");
         echo("<h3>Votre Brawler Pref :
-            <datalist>
-                <option value='fang'>Fang</option>
-                <option value='bull'>Bull</option>
-                <option value='penny'>Penny</option>
-                <option value='surge'>Surge</option>
-                <option value='edgar'>Edgar</option>
-            </datalist>
-        </h3>.<br>");
+        
+        <input list='perso' name='Perso' value='$Brawler' placeholder='Entre ton Main'/>
+            <datalist id='perso'>");
+                display_brawlers();
+            echo("</datalist>
+        </h3><br>");
         echo("<h3>Votre Mode Pref :
-        <datalist id='mode'>
-            <option value='bb'>Brawlball</option>
-            <option value='rz'>Razia</option>
-            <option value='sv'>Survivant</option>
-            <option value='bq'>Braquage</option>
-            <option value='hj'>Hors-Jeu</option>
-                
+        <input list='mode' name='Mode' value='$Mode' placeholder='Entre ton Mode Préféré'/>
+        <datalist id='mode'>");
+        	display_mode();
+        echo("      
         </datalist>
-        </h3>.<br>");
+        </h3><br>");
         echo ("<input type='submit' name='Submit' value='S inscrire'/>");
         echo("</form>");
     }
