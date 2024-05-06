@@ -1,3 +1,6 @@
+<?php
+	require_once("liste_brawlers.php");
+?>
 <!DOCTYPE html>
 
 <html>
@@ -16,12 +19,9 @@
 			<input type="text" name="htag" placeholder="# Brawl Stars"/>
 			<input list="perso" name="Perso" placeholder="Ton Perso Préféré"/>
 			<datalist id="perso">
-				<option value="fang">Fang</option>
-				<option value="bull">Bull</option>
-				<option value="penny">Penny</option>
-				<option value="surge">Surge</option>
-				<option value="edgar">Edgar</option>
-				<!--faire un affichage dynamique de la liste en php-->
+				<?php
+					display_brawlers();
+				?>
 			</datalist>
 			<input list="mode" name="Mode" placeholder="Ton Mode Préféré"/>
 			<datalist id="mode">
