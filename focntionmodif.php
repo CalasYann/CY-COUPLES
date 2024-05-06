@@ -52,7 +52,7 @@ function affichageProfil($modifs){
         echo ("<h3>Votre Nom :$Nom </h3> <br>");
         echo("<h3>Votre Prenom :$Prenom</h3> <br>");
         echo("<h3>Votre Pseudo :$Pseudo</h3> <br>");
-        echo("<h3>Votre BrawlTag :echo $Brawlname</h3> <br>");
+        echo("<h3>Votre BrawlTag : $Brawlname</h3> <br>");
         echo("<h3>Votre Mot de Passe :$Password </h3> <br>");
         echo("<h3>Votre Mail :$Mail </h3> <br>");
         echo("<h3>Votre ID :$Id </h3> <br>");
@@ -68,6 +68,7 @@ function affichageProfil($modifs){
         echo("<h3>Votre Pseudo :<input type='text' value='$Pseudo' name='Pseudo'>  </h3> <br>");
         echo("<h3>Votre BrawlTag :<input type='text' value='$Brawlname' name='Bname'>  </h3> <br>");
         echo("<h3>Votre Mot de Passe :<input type='text' value='$Password' name='mdp'>  </h3> <br>");
+        //mettre un champ caché avec l'ancien mot de passe (hidden)
         echo("<h3>Votre Mail :$Mail </h3> <br>");
         echo("<h3>Votre ID :<input type='text' value='$Id' name='nom'></h3> <br>");
         echo("<h3>Votre Brawler Pref :
@@ -86,10 +87,8 @@ function affichageProfil($modifs){
         </h3><br>");
         echo ("<input type='submit' name='Submit' value='S inscrire'/>");
         echo("</form>");
-    }
-        
+    }     
 }
-
 ?>
 
 
