@@ -1,0 +1,11 @@
+<?php
+	define("P_Nom","NOM");
+	define("P_Prenom","PRENOM");
+	define("P_Pseudo","PSEUDO");
+	define("P_BrawlName","BRAWLNAME");
+	define("P_Password","PASSWORD");
+	define("P_Mail","MAIL");
+	define("P_Id","ID");
+	define("P_Brawler","BRAWLER");
+	define("P_Mode","MODE");
+?>
