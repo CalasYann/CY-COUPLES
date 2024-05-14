@@ -38,7 +38,7 @@ function browse_players($type, $value){
         }
 
         if ($content == $value){
-            $users[i] = $file;
+            $users[$i] = $file;
             $i++;
         }
     }
