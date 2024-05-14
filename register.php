@@ -5,6 +5,7 @@
 
 $dir = new FilesystemIterator(dirname(__FILE__)."/backend");
 
+$logs = fopen("./backend/logs_register.txt", "a");
 
 $email = $_POST["mail"];
 //$email = "non@gmail.com";
@@ -32,6 +33,9 @@ $doubledragon = fwrite($file, "MAIL:".$_POST["mail"]."\n");
 $doubledragon = fwrite($file, "ID:".$_POST["htag"]."\n");
 $doubledragon = fwrite($file, "BRAWLER:".$_POST["Perso"]."\n");
 $doubledragon = fwrite($file, "MODE:".$_POST["Mode"]."\n");
+
+$success_logs_register = fwrite($logs, date("d-m-Y").":".$email);
+fclose($logs);
 
 fclose($file);
 
