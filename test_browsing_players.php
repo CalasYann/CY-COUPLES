@@ -3,7 +3,6 @@
     require_once("browse_players.php");
     require_once("liste_brawlers.php");
 
-    $user_list = browse_players("MODE", "Brawlball");
 
 ?>
 
