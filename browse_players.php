@@ -46,6 +46,8 @@ function browse_players($type, $value){
 }
 
 $users = array();
+$buffer_users = array();
+$users_final = array();
 
 
 /*foreach($_GET as $key => $value){
@@ -54,9 +56,35 @@ $users = array();
     }
 }*/
 
-echo("answer<br>");
+
+
 foreach($_POST as $key => $value){
     echo("$key : $value <br>");
+    $users[$key] = browse_players(strtoupper($key), $value);
+}
+
+
+$i = 0;
+
+foreach($users as $key => $value){
+    //value is an array of users
+    foreach($value as $key2 => $value2){
+        //$key2 est un entier, $value2 est un email
+        if ( in_array($key2, $buffer_users) == false ){
+            $buffer_users[$i] = $key2;
+            $i++;
+        }
+    }
+}
+
+$state = 1;
+
+foreach($buffer_users as $key => $value){
+    foreach($users as $key2 => $value2){
+        if (in_array($value, $value2) == false ){
+            $state=0;
+        }
+    }
 }
 
 // get all users with same mode and/or same favorite and/or
