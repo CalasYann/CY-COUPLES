@@ -9,7 +9,7 @@ require_once("list_mode.php");
 <html>
     <head>
         <title>Recherche</title>
-        <script src ="test.js">
+        <script src ="browse_search.js">
         </script>
     </head>
     <body>

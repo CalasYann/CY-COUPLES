@@ -80,12 +80,23 @@ foreach($users as $key => $value){
 $state = 1;
 
 foreach($buffer_users as $key => $value){
+    $state = 1;
     foreach($users as $key2 => $value2){
         if (in_array($value, $value2) == false ){
             $state=0;
         }
     }
+    if($state == 1){
+        array_push($users_final, $value);
+    }
 }
+
+$json_typing = json_encode($users_final);
+
+$file_json = fopen("json_test.json", "w");
+fwrite($file_json, $json_typing);
+
+//echo("hello la team");
 
 // get all users with same mode and/or same favorite and/or
 // array $users

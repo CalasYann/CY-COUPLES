@@ -10,6 +10,10 @@ function sendData(){
 
             // json parse ???
             // 'foreach'  : var users[i].pseudo .xxx
+            let bouton = document.getElementsByTagName("input")[2];
+            bouton.value = "lol";
+
+            console.log(bouton);
         }
     };
     
@@ -21,7 +25,7 @@ function sendData(){
     params  = "mode=" + mode.value;
     params += "&brawler=" + brawler.value;
 
-    xhr.open("POST", "test_browse2.php", true);
+    xhr.open("POST", "browse_players.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send(params);
 
