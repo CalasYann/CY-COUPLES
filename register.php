@@ -34,7 +34,7 @@ $doubledragon = fwrite($file, "ID:".$_POST["htag"]."\n");
 $doubledragon = fwrite($file, "BRAWLER:".$_POST["Perso"]."\n");
 $doubledragon = fwrite($file, "MODE:".$_POST["Mode"]."\n");
 
-$success_logs_register = fwrite($logs, date("d-m-Y").":".$email);
+$success_logs_register = fwrite($logs, date("d-m-Y").":".$email."\n");
 fclose($logs);
 
 fclose($file);

@@ -22,8 +22,8 @@ function sendData(){
 
     console.log(mode);
 
-    params  = "mode=" + mode.value;
-    params += "&brawler=" + brawler.value;
+    params  = "MODE=" + mode.value;
+    params += "&BRAWLER=" + brawler.value;
 
     xhr.open("POST", "browse_players.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

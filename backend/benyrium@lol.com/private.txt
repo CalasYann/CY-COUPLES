@@ -1,0 +1,9 @@
+NOM:Derras
+PRENOM:Rayan
+PSEUDO:Benyrium
+BRAWLNAME:benyrium_bs
+PASSWORD:1234567
+MAIL:benyrium@lol.com
+ID:#123456
+BRAWLER:El costo
+MODE:Brawlball

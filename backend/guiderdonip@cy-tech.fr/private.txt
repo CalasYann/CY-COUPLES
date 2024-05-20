@@ -6,4 +6,4 @@ PASSWORD:PauloAPVC-mdp
 MAIL:guiderdonip@cy-tech.fr
 ID:#123456
 BRAWLER:Fang
-MODE:bb
+MODE:Brawlball

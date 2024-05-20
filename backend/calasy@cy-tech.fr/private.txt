@@ -6,4 +6,4 @@ PASSWORD:Yann444mdp
 MAIL:calasy@cy-tech.fr
 ID:#123456
 BRAWLER:Penny
-MODE:bb
+MODE:Brawlball
