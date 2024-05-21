@@ -8,6 +8,34 @@ $users = array();
 $i = 0;
 
 
+function get_10_most_recent_users() {
+    global $dir;
+    $users = array();
+    $i = 0;
+    $j = 0;
+    $file = fopen("./backend/logs_register.txt", "r");
+    $lines_number = count(file($file));
+    if ( $lines_number == 0) {
+        return $users;
+    }else if ( $lines_number <10) {
+        while ($i < $lines_number ) {
+            $users[$i] = explode(":", fgets($file))[1];
+            $i++;
+        }
+    }
+    else{
+        while ($j < $lines_number-10) {
+            fgets($file);
+        }
+        while ($i <10) {
+            $users[$i] = explode(":", fgets($file))[1];
+            $i++;
+        }
+    }
+    return $users;
+}
+
+
 function browse_players($type, $value){
     $users = array();
     $i = 0;
