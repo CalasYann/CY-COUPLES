@@ -1,21 +1,21 @@
-<?php
 
-require_once("liste_brawlers.php");
-require_once("list_mode.php");
-require_once("browse_players.php");
-require_once("get_user_info.php");
-
-?>
 
 <!DOCTYPE html>
 <html>
     <head>
+
+        <?php
+            require_once("liste_brawlers.php");
+            require_once("list_mode.php");
+            require_once("browse_players.php");
+            require_once("get_user_info.php");
+        ?>
         <title>Recherche</title>
         <script src ="browse_search.js">
         </script>
     </head>
     <body>
-        <form id="browsing_data" action="browse_players.php" method="get">
+        <form id="browsing_data" action="browse_players.php" method="post">
             <input id="mode_field" name="mode" list="mode" placeholder="Mode préféré">
             <datalist id ="mode">
                 <?php
@@ -30,6 +30,7 @@ require_once("get_user_info.php");
                 ?>
             </datalist>
             <input type="button" value="Rechercher" onclick="sendData()">
+            
         </form>
 
 
@@ -39,11 +40,11 @@ require_once("get_user_info.php");
                 $recent_users_count = count($recent_users);
                 $information_recent_users = array();
                 foreach($recent_users as $user){
-                    $information_recent_users[$user] = array("nick" => get_player_info($key, "PSEUDO"),
-                    "nick_bs" => get_player_info($key, "BRAWLNAME"),
-                    "id" => get_player_info($key, "ID"),
-                    "brawler" => get_player_info($key, "BRAWLER"),
-                    "MODE" => get_player_info($key, "MODE"));
+                    $information_recent_users[$user] = array("nick" => get_player_info($user, "PSEUDO"),
+                    "nick_bs" => get_player_info($user, "BRAWLNAME"),
+                    "id" => get_player_info($user, "ID"),
+                    "brawler" => get_player_info($user, "BRAWLER"),
+                    "MODE" => get_player_info($user, "MODE"));
                 }
             ?>
             

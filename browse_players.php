@@ -14,7 +14,8 @@ function get_10_most_recent_users() {
     $i = 0;
     $j = 0;
     $file = fopen("./backend/logs_register.txt", "r");
-    $lines_number = count(file($file));
+    $lines_number = count(file("./backend/logs_register.txt"));
+    //$lines_number = count(file($file));
     if ( $lines_number == 0) {
         return $users;
     }else if ( $lines_number <10) {
@@ -41,9 +42,9 @@ function browse_players($type, $value){
     $i = 0;
     global $dir;
     foreach ($dir as $file) {
-        echo($dir."\n");
+        //echo($dir."\n");
         if ($file->isDir()) {
-            echo("  file is Dir\n");
+            //echo("  file is Dir\n");
             $user_file = fopen($file."/private.txt","r");
             $buffer_line = fgets($user_file);
             $lines = explode(":", $buffer_line);
@@ -56,10 +57,10 @@ function browse_players($type, $value){
                 $field = trim($lines[0]);
                 $content = trim($lines[1]);
             }
-            echo("    -------field :".$field." content : ".$content."\n");
+            //echo("    -------field :".$field." content : ".$content."\n");
 
             if ($content == $value){
-                echo("test passé\n");
+                //echo("test passé\n");
                 $temp = count(explode("\\", $file));
                 array_push($users, strval(
                     explode("\\", $file)[$temp-1]));
@@ -69,22 +70,27 @@ function browse_players($type, $value){
     return $users;
 }
 
+function request(){
+
+global $dir;
+global $users;
+
 $buffer_users = array();
 $users_final = array();
 
 
-foreach($_POST as $key => $value){
+/*foreach($_POST as $key => $value){
     echo("post key : ".$key." post value : ".$value."\n");
-}
+}*/
 
 
 foreach($_POST as $key => $value){
     if (empty($_POST[$key] == false)){
-        echo("$key : $value"."\n");
+        //echo("$key : $value"."\n");
         $users[$key] = browse_players(trim(strtoupper($key)), trim($value));
-        echo("$key\n");
-        print_r($users[$key]);
-        echo("||||||||||||||||\n");
+        //echo("$key\n");
+        //print_r($users[$key]);
+        //echo("||||||||||||||||\n");
     }
 }
 
@@ -96,13 +102,13 @@ foreach($users as $key => $value){
     foreach($value as $key2 => $value2){
         //$key2 est un entier, $value2 est un email
         if ( in_array($value2, $buffer_users) == false ){
-            echo("\$key2 in \buffer_susers : ".$key2."\n");
+            //echo("\$key2 in \buffer_susers : ".$key2."\n");
             $buffer_users[$i] = $value2;
             $i++;
         }
     }
 }
-print_r($buffer_users);
+//print_r($buffer_users);
 
 $state = 1;
 
@@ -118,27 +124,38 @@ foreach($buffer_users as $key => $value){
     }
 }
 
-echo("||||||||||||||||||\n");
-print_r($users_final);
+//echo("||||||||||||||||||\n");
+//print_r($users_final);
 
 $json_typing = json_encode($users_final);
 
 $information_final = array();
 
 foreach($users_final as $key => $value){
-    $information_final[$key] = array("nick" => get_player_info($key, "PSEUDO"),
-                                     "nick_bs" => get_player_info($key, "BRAWLNAME"),
-                                     "id" => get_player_info($key, "ID"),
-                                     "brawler" => get_player_info($key, "BRAWLER"),
-                                     "MODE" => get_player_info($key, "MODE"));
+    $information_final[$key] = array("nick" => get_player_info($value, "PSEUDO"),
+                                     "nick_bs" => get_player_info($value, "BRAWLNAME"),
+                                     "id" => get_player_info($value, "ID"),
+                                     "brawler" => get_player_info($value, "BRAWLER"),
+                                     "MODE" => get_player_info($value, "MODE"));
 }
 
 //encoder toutes les informations nécessaires dans le fichier json
 
+$json_typing = json_encode($information_final);
+
 $file_json = fopen("json_test.json", "w");
+echo($json_typing);
 fwrite($file_json,$json_typing);
 
 fclose($file_json);
+
+}
+
+if (isset($_POST["MODE"]) == true){
+    request();
+}
+
+
 
 //echo("hello la team");
 

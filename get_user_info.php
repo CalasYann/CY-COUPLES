@@ -2,10 +2,10 @@
 
 
 function get_player_info($player_email, $field_name) {
-    if(is_file("./backend".$player_email."/private.txt") == false) {
-        exit("user nonexistent");
-    }
-    $file = fopen("./backend".$player_email."/private.txt","r");
+    /*if(is_file("./backend/".trim($player_email)."/private.txt")) {
+        exit("user nonexistent ".$player_email ."\n");
+    }*/
+    $file = fopen("./backend/".trim($player_email)."/private.txt","r");
     $buffer_line = fgets($file);
     $line = explode(":", $buffer_line);
     $field = $line[0];
@@ -17,7 +17,7 @@ function get_player_info($player_email, $field_name) {
         $value = $line[1];
     }
 
-    return $value;
+    return trim($value);
 }
 
 
