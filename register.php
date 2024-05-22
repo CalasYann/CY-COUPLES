@@ -40,7 +40,7 @@ fclose($logs);
 fclose($file);
 
 if($doubledragon != false){
-    header("Location:https://op.gg/summoners/euw/benyrium-eeuuw");  //mettre cette condition à chaque fwrite();
+    header("Location:hub.php");  //mettre cette condition à chaque fwrite();
     exit(0);
 }
 else{

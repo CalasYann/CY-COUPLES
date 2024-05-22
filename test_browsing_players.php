@@ -5,7 +5,7 @@
     <head>
 
         <?php
-            require_once("liste_brawlers.php");
+            require_once("list_brawlers.php");
             require_once("list_mode.php");
             require_once("browse_players.php");
             require_once("get_user_info.php");
@@ -46,7 +46,15 @@
                     "brawler" => get_player_info($user, "BRAWLER"),
                     "MODE" => get_player_info($user, "MODE"));
                 }
+
+                $information_recent_users = array_reverse($information_recent_users);
+
+                foreach($information_recent_users as $user){
+                    $tag="<div> bgcolor='grey' margin='15px'> $user[nick]</div>";
+                    echo("<div style='background-color:grey;margin:15px'> $user[nick] </div>"); //appliquer le style avec un fichier css
+                }
             ?>
+
             
         </div>
     </body>
