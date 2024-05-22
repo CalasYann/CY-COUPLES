@@ -3,10 +3,10 @@
 require_once ('define.inc.php');
 require_once ('list_brawlers.php');
 require_once ('list_mode.php');
-    
+require_once("test_session.php");
 function affichageProfil($modifs){
     
-    $fichier=file('backend/lecon@gmail.com/private.txt');
+    $fichier=file('backend/$_SESSION["mail"]/private.txt');
     $total=count($fichier);
     for($i=0;$i<$total;$i++){
         $c=$fichier[$i];

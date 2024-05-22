@@ -1,6 +1,7 @@
 <?php
-	require_once("liste_brawlers.php");
+	require_once("list_brawlers.php");
 	require_once("list_mode.php");
+	
 ?>
 <!DOCTYPE html>
 
