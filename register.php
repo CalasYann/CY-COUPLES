@@ -1,6 +1,6 @@
 <?php
-
-
+session_start();
+$_SESSION["mail"]=$_POST["mail"];
 //rendre le code robuste par rapports aux fichiers 
 
 $dir = new FilesystemIterator(dirname(__FILE__)."/backend");
