@@ -4,7 +4,7 @@ $list_mode = array(
 	"Razia de Gemme",
 	"Heist",
 	"Prime",
-	"Brawl Ball",
+	"Brawlball",
 	"Survivant Solo",
 	"Survivant Duo",
 	"Zone Réservé",

@@ -1,0 +1,9 @@
+NOM:Ba
+PRENOM:Louqman
+PSEUDO:loulou
+BRAWLNAME:The Log
+PASSWORD:12345678
+MAIL:thelog@gmail.com
+ID:#12345678
+BRAWLER:Colette
+MODE:Razia de Gemme

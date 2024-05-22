@@ -6,6 +6,8 @@ function displayUsers(data){
     var users_count = data.length;
     var div_element;
 
+    container.innerHTML = ""
+
     //ajouter users_count*div qui vont chacun comporter les inforamtions de l'utilisateur
     for (var i = 0; i<users_count; i++){
         div_element = document.createElement("div");
@@ -15,8 +17,12 @@ function displayUsers(data){
         div_element.style.padding = "15px";
         div_element.style.margin = "15px";
 
+        
+
 
         container.appendChild(div_element);
+        div_element.innerHTML = data[i].nick + " Brawler préféré : " +  data[i].brawler;
+
     }
 }
 

@@ -1,5 +1,6 @@
 <?php
 	require_once("liste_brawlers.php");
+	require_once("list_mode.php");
 ?>
 <!DOCTYPE html>
 
@@ -25,12 +26,9 @@
 			</datalist>
 			<input list="mode" name="Mode" placeholder="Ton Mode Préféré"/>
 			<datalist id="mode">
-				<option value="bb">Brawlball</option>
-				<option value="rz">Razzia</option>
-				<option value="sv">Survivant</option>
-				<option value="bq">Braquage</option>
-				<option value="hj">Hors-Jeu</option>
-				<!--faire un affichage dynamique de la liste en php-->
+				<?php
+					display_mode();
+				?>
 			</datalist>
 			<input type="reset" />
 			<input type="submit" name="Submit" value="S'inscrire"/>
