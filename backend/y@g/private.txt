@@ -1,0 +1,9 @@
+NOM:al
+PRENOM:aa
+PSEUDO:aaa
+BRAWLNAME:fsqc
+PASSWORD:czsqcqs
+MAIL:y@g
+ID:zdfaz
+BRAWLER:Arkad
+MODE:Razia de Gemme

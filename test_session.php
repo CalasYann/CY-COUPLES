@@ -2,11 +2,12 @@
 
 session_start();
 
-if (isset($_SESSION["Mail"])){
+if (isset($_SESSION["mail"])){
     $state=1;
 
 }else{ 
     $state= 0;
+    header("Location: pageacceuil.php");
 }
 
 ?>

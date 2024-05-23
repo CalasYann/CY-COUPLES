@@ -1,4 +1,6 @@
 <?php
+session_start();
+require_once('ouverture_session.php');
 echo($_POST["password"]."\n");
 
 
@@ -8,6 +10,7 @@ $users = array();
 $i = 0;
 
 $email_request = $_POST["email"];
+ouverture_session($_POST["email"]);
 echo"------------------------\n";
 echo($email_request);
 echo"------------------------\n";

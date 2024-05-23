@@ -3,10 +3,10 @@
 require_once ('define.inc.php');
 require_once ('list_brawlers.php');
 require_once ('list_mode.php');
-require_once("test_session.php");
+
 function affichageProfil($modifs){
-    
-    $fichier=file('backend/$_SESSION["mail"]/private.txt');
+    $dos=$_SESSION["mail"];
+    $fichier=file('backend/'.$dos.'/private.txt');
     $total=count($fichier);
     for($i=0;$i<$total;$i++){
         $c=$fichier[$i];
@@ -59,6 +59,7 @@ function affichageProfil($modifs){
         echo("<h3>Votre Brawler Pref :$Brawler  </h3> <br>");
         echo("<h3>Votre Mode Pref :$Mode  </h3> <br>");
         echo("<a href='Modifprofils.php'><button> Modif du profil </button></a>");
+        echo("<a href='hub.php'><button>Acceuil</button></a>");
     }else{
     
         echo ("<h1> Bienvenue sur votre Porfil </h1> <br>");

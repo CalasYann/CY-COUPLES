@@ -1,0 +1,9 @@
+NOM:fe
+PRENOM:ezfzef
+PSEUDO:fzef
+BRAWLNAME:fzef
+PASSWORD:zefz
+MAIL:efzf@ez
+ID:fzef
+BRAWLER:Nita
+MODE:Razia de Gemme
