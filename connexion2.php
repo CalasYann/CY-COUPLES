@@ -9,6 +9,7 @@ $i = 0;
 
 $email_request = $_POST["email"];
 $_SESSION["mail"]=$_POST["email"];
+$email_request = trim($_POST["email"]);
 echo"------------------------\n";
 echo($email_request);
 echo"------------------------\n";
@@ -53,10 +54,13 @@ foreach($users as $user) {
         }
 
         if ($_POST["password"] == $buffer_password){
-            header("Location:https://op.gg/summoners/euw/nate-2709");
+            header("Location:hub.php");
+            break;
         }
+        
         else{
-            header("Location:https"); //renvoyer vers la page de connexion avec une erreur
+            header("Location:connexion.php"); //renvoyer vers la page de connexion avec une erreur
+            break;
         }
     }
 }
