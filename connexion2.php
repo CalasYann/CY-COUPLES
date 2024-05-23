@@ -32,10 +32,7 @@ foreach($users as $user) {
     
     
         if ($buffer_table[0] == "PASSWORD") {
-            
             $buffer_password = $buffer_table[1];
-            
-            
         }
 
 
