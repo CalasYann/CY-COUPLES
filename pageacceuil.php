@@ -12,7 +12,7 @@
       </div>
 
       <div class="buttons">
-        <button class="custom-btn btn-1">CONNEXION</button>
+        <a href="connexion.php"><button class="custom-btn btn-1">CONNEXION</button></a>
 
       </div>
     </nav>

@@ -1,8 +1,6 @@
 <?php
 session_start();
-require_once('ouverture_session.php');
 echo($_POST["password"]."\n");
-
 
 $dir = new FilesystemIterator(dirname(__FILE__)."/backend");
 
@@ -10,7 +8,7 @@ $users = array();
 $i = 0;
 
 $email_request = $_POST["email"];
-ouverture_session($_POST["email"]);
+$_SESSION["mail"]=$_POST["email"];
 echo"------------------------\n";
 echo($email_request);
 echo"------------------------\n";
@@ -54,13 +52,9 @@ foreach($users as $user) {
             echo($buffer_password);
         }
 
-
         if ($_POST["password"] == $buffer_password){
-        header("Location:https://op.gg/summoners/euw/nate-2709");
+            header("Location:https://op.gg/summoners/euw/nate-2709");
         }
-        
-
-        
         else{
             header("Location:https"); //renvoyer vers la page de connexion avec une erreur
         }
