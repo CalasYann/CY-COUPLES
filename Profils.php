@@ -1,4 +1,6 @@
 <?php
+	session_start();
+
 	require_once('test_session.php');
 
 	require_once ('define.inc.php');

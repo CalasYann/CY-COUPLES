@@ -1,5 +1,6 @@
 <?php
-    require_once("test_session.php");
+    session_start();
+   require_once("test_session.php");
 ?>
 <!DOCTYPE html>
 <html>
