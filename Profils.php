@@ -1,16 +1,8 @@
 <?php
-	require_once("test_session.php");
-?>
-<!DOCTYPE html>
-<html>
-<head>
-	
-	<title>Profil</title>
-</head>
-<body>
+	session_start();
 
+	require_once('test_session.php');
 
-<?php
 	require_once ('define.inc.php');
 	require_once ('fonctionmodif.php');
 	
@@ -22,13 +14,8 @@
 	if($state==1){
     	affichageProfil(1);
 	}
-	else{
-		echo("t'es pas connecté mon reuf");
+
+	else {
+		echo("Petit problème");
 	}
 ?>
-
-
-
-
-</body>
-</html>

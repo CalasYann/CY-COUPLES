@@ -1,11 +1,14 @@
 <?php
 
+session_start();
 
 $dir = new FilesystemIterator(dirname(__FILE__)."/backend");
 
 $users = array();
 $i = 0;
 
+$email_request = $_POST["email"];
+$_SESSION["mail"]=$_POST["email"];
 $email_request = trim($_POST["email"]);
 
 
@@ -35,7 +38,6 @@ foreach($users as $user) {
             $buffer_password = $buffer_table[1];
         }
 
-
         if ($_POST["password"] == $buffer_password){
             header("Location:hub.php");
             break;
@@ -47,9 +49,5 @@ foreach($users as $user) {
         }
     }
 }
-
-
-
-
 
 ?>

@@ -16,7 +16,6 @@
             <label for="password">Password : </label>
             <input name="password" id="password" type="password" size="10"/>
             <input type="submit" value="Se Connecter"/>
-            <button type="submit" title="Sign In">Sign In</button>
         </div>
 
     </form>
@@ -24,6 +23,6 @@
     <br>
     <br>
     <div>
-        <a href="inscription.html">S'inscrire</a>
+        <a href="Inscription.php">S'inscrire</a>
     </div>
 </body>
