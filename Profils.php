@@ -23,7 +23,7 @@
     	affichageProfil(1);
 	}
 	else{
-		echo("t'es pas connecté mon reuf");
+		exit(0);
 	}
 ?>
 
