@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 $dir = new FilesystemIterator(dirname(__FILE__)."/backend");
 
@@ -51,9 +52,5 @@ foreach($users as $user) {
         }
     }
 }
-
-
-
-
 
 ?>
