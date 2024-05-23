@@ -60,6 +60,7 @@ function affichageProfil($modifs){
         echo("<h3>Votre Mode Pref :$Mode  </h3> <br>");
         echo("<a href='Modifprofils.php'><button> Modif du profil </button></a>");
         echo("<a href='hub.php'><button>Acceuil</button></a>");
+        echo("<a href='delete.php'><button>supprimer le compte</button></a>");
     }else{
     
         echo ("<h1> Bienvenue sur votre Porfil </h1> <br>");

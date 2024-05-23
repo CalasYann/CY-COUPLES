@@ -3,10 +3,10 @@ session_start();
 require_once("test_session.php");
 require_once("deconnect.php");
 
-$file='backend/'.$_SESSION['mail'].'private.txt';
+$file='backend/'.$_SESSION['mail'].'/private.txt';
 
-if( file_exists ( $file)){
-     unlink( $file);
+if( file_exists ($file)){
+     unlink($file);
 }
 
 
