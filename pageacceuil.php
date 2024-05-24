@@ -43,7 +43,7 @@
 <div class="p2">
 <table>
 <tr>
-	<th><img src="../Projet 1/stardrop rare.png" width="70" height="70"/></th>
+	<th><img src="https://github.com/CalasYann/CY-COUPLES/blob/main/stardrop%20rare.png" width="70" height="70"/></th>
 	<th></th><th></th><th></th><th></th>
 	<th>Utilisateur RARE :</th>
 	<th></th><th></th><th></th><th></th>
@@ -63,7 +63,7 @@
 <div class="p2">
 <table>
 <tr>
-	<th><img src="../Projet 1/stardrop epique.png" width="70" height="70"/></th>
+	<th><img src="https://github.com/CalasYann/CY-COUPLES/blob/main/stardrop%20epique.png" width="70" height="70"/></th>
 	<th></th><th></th><th></th><th></th>
 	<th>Utilisateur EPIQUE :</th>
 	<th></th><th></th><th></th><th></th>
@@ -82,7 +82,7 @@
 <div class="p2">
 <table>
 <tr>
-	<th><img src="../Projet 1/stardrop legendaire.png" width="70" height="70"/></th>
+	<th><img src="https://github.com/CalasYann/CY-COUPLES/blob/main/stardrop%20legendaire.png" width="70" height="70"/></th>
 	<th></th><th></th><th></th><th></th>
 	<th>Utilisateur LEGENDAIRE :</th>
 	<th></th><th></th><th></th><th></th>
