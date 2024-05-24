@@ -1,6 +1,9 @@
 <?php
+	session_start();
+	session_destroy();
 	require_once("list_brawlers.php");
 	require_once("list_mode.php");
+	
 	
 ?>
 <!DOCTYPE html>

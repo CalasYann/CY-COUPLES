@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION["mail"]=$_POST["mail"];
+
 //rendre le code robuste par rapports aux fichiers 
 
 $dir = new FilesystemIterator(dirname(__FILE__)."/backend");
@@ -39,7 +39,8 @@ $success_logs_register = fwrite($logs, date("d-m-Y").":".$email."\n");
 fclose($logs);
 
 fclose($file);
-
+$_SESSION["mail"]=$_POST["mail"];
+$_SESSION["admin"]=0;
 if($doubledragon != false){
     header("Location:hub.php");  //mettre cette condition à chaque fwrite();
     exit(0);
