@@ -9,3 +9,27 @@
     margin: 10px;
     margin-top: 10px;
 }
+
+section{
+    align-items: center;
+    margin: 100px;
+    background-color: lightgrey;
+    width: 300px;
+    height: 400px;
+}
+
+#profile{
+    position: relative;
+    top:50px;
+    left:25px;
+    right: 25px;
+    width:90%;
+    height:30%;
+    background-color: lightpink;
+    
+}
+
+#player_icon{
+    height:70px;
+    width: 70px;
+}
