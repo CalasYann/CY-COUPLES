@@ -3,10 +3,10 @@
 
 function get_player_info($player_email, $field_name) {
     if(is_dir("./backend/".trim($player_email)) == false) {
-        exit("user nonexistent ".$player_email ."\n");
+       return false;
     }
-    if (is_file("./backend/".trim($player_email)) == false){
-        exit("user nonexistent "/$player_email ."\n");
+    if (is_file("./backend/".trim($player_email)."/private.txt") == false){
+        return false;
     }
     $file = fopen("./backend/".trim($player_email)."/private.txt","r");
     $buffer_line = fgets($file);
