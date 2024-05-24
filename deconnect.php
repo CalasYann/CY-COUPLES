@@ -3,7 +3,9 @@
 function deconnect(){
     session_destroy();
 
-    header("Location: pageacceuil.php");
+    header("Location:pageacceuil.php");
 
 }
+
+deconnect();
 ?>
