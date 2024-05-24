@@ -12,14 +12,14 @@ $email = $_POST["mail"];
 $status = 0;
 foreach($dir as $file ){
     if($file == $email){
-        header("Location:https://op.gg/summoners/euw/nate-2709");
+        header("Location:pageacceuil.php");
         exit(0);
     }
 }
 
 $status =  mkdir("./backend/".$_POST["mail"]);
 if ($status == false){
-    header("Location:https://op.gg/summoners/euw/gerax-euw");
+    header("Location:pageacceuil.php");
     exit(0);
 }
 $doubledragon = 1;
@@ -33,6 +33,7 @@ $doubledragon = fwrite($file, "MAIL:".$_POST["mail"]."\n");
 $doubledragon = fwrite($file, "ID:".$_POST["htag"]."\n");
 $doubledragon = fwrite($file, "BRAWLER:".$_POST["Perso"]."\n");
 $doubledragon = fwrite($file, "MODE:".$_POST["Mode"]."\n");
+$doubledragon = fwrite($file, "ABONNEMENT:".$_POST["abo"]."\n");
 
 $success_logs_register = fwrite($logs, date("d-m-Y").":".$email."\n");
 fclose($logs);
@@ -44,7 +45,7 @@ if($doubledragon != false){
     exit(0);
 }
 else{
-    header("Location:https://youtube.com");
+    header("Location:pageacceuil.php");
     exit(0);
 }
 /*$mails = "test2";
