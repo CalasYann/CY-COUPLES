@@ -9,6 +9,7 @@ $i = 0;
 
 $email_request = $_POST["email"];
 $_SESSION["mail"]=$_POST["email"];
+$_SESSION["admin"]=0;
 $email_request = trim($_POST["email"]);
 
 

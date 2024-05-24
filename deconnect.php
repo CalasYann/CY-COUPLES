@@ -7,5 +7,6 @@ function deconnect(){
 
 }
 
+session_start();
 deconnect();
 ?>

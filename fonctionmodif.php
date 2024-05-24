@@ -17,33 +17,33 @@ function affichageProfil($modifs){
         //echo ($test."<br>");
         //echo ($li[0]."<br>");
         switch ($li[0]){
-            case NOM;
+            case "NOM";
                 //$$li[0]=$li[1];
                 //break;
-            case PRENOM;
+            case "PRENOM";
                 //$Prenom=$li[1];
                 //break;
-            case PSEUDO;
+            case "PSEUDO";
                 //$Pseudo=$li[1];
                 //break;
-            case MAIL;
+            case "MAIL";
                 //$Mail=$li[1];
                 //break;
-            case ID;
+            case "ID";
                 //$Id=$li[1];
                 //break;
-            case PASSWORD;
+            case "PASSWORD";
                 //$Password=$li[1];
                 //break;
-            case BRAWLER;
+            case "BRAWLER";
                 //$Brawler=$li[1];
                 //break;
-            case MODE;
+            case "MODE";
                 //$Mode=$li[1];
                 //break;
-            case BRAWLNAME;
+            case "BRAWLNAME";
                 //$BrawlName=$li[1];
-            case ABONNEMENT;
+            case "ABONNEMENT";
                 $$test=$li[1];
                 break;    
         }
@@ -91,13 +91,38 @@ function affichageProfil($modifs){
         </datalist>
         </h3><br>");
         echo("Changer d'abonnement : (Si vous changer d'abonnement vous risquez d'être facturé");
-       echo(" <input type='radio' name='abo' value='rare'/>");
-	echo('<label for="rare">RARE</label>');
-	echo('<input type="radio" name="abo" value="epique"/>');
-	echo('<label for="rare">EPIQUE</label>');
-	echo('<input type="radio" name="abo" value="légendaire"/>');
-	echo('<label for="rare">LEGENDAIRE</label>');
-        echo ("<input type='submit' name='Submit' value='Modifier mon Profil'/>");
+      
+       if(trim($Abonnement)=="rare"){
+            echo(" <input type='radio' name='Abonnement' value='rare' checked />");
+            echo('<label for="rare">RARE</label>');
+            echo('<input type="radio" name="Abonnement" value="épique"/>');
+            echo('<label for="rare">EPIQUE</label>');
+            echo('<input type="radio" name="Abonnement" value="légendaire"/>');
+            echo('<label for="rare">LEGENDAIRE</label>');
+       }else if(trim($Abonnement)=='épique'){
+            echo(" <input type='radio' name='Abonnement' value='rare'/>");
+            echo('<label for="rare">RARE</label>');
+            echo('<input type="radio" name="Abonnement" value="épique" checked />');
+            echo('<label for="rare">EPIQUE</label>');
+            echo('<input type="radio" name="Abonnement" value="légendaire"/>');
+            echo('<label for="rare">LEGENDAIRE</label>');
+       }
+       else if(trim($Abonnement)=='légendaire'){
+            echo(" <input type='radio' name='Abonnement' value='rare'/>");
+            echo('<label for="rare">RARE</label>');
+            echo('<input type="radio" name="Abonnement" value="épique"/>');
+            echo('<label for="rare">EPIQUE</label>');
+            echo('<input type="radio" name="Abonnement" value="légendaire" checked />');
+            echo('<label for="rare">LEGENDAIRE</label>');
+       }else{
+            echo(" <input type='radio' name='Abonnement' value='rare'/>");
+            echo('<label for="rare">RARE</label>');
+            echo('<input type="radio" name="Abonnement" value="épique"/>');
+            echo('<label for="rare">EPIQUE</label>');
+            echo('<input type="radio" name="Abonnement" value="légendaire" />');
+            echo('<label for="rare">LEGENDAIRE</label>');
+       }
+        echo ("<br><input type='submit' name='Submit' value='Modifier mon Profil'/>");
         echo("</form>");
     } 
 }

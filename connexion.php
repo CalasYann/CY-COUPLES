@@ -1,3 +1,8 @@
+<?php
+    session_start();   
+    session_destroy();
+    
+?>
 <!DOCTYPE html>
 <head>
     <title>Connexion</title>
@@ -24,5 +29,6 @@
     <br>
     <div>
         <a href="Inscription.php">S'inscrire</a>
+        <a href="connect_admin.php">Je suis ADMIN</a>
     </div>
 </body>

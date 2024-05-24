@@ -1,6 +1,9 @@
 <?php
+	session_start();
+	session_destroy();
 	require_once("list_brawlers.php");
 	require_once("list_mode.php");
+	
 	
 ?>
 <!DOCTYPE html>
@@ -33,7 +36,7 @@
 			</datalist>
 			<input type="radio" name="abo" value="rare"/>
 			<label for="rare">RARE</label>
-			<input type="radio" name="abo" value="epique"/>
+			<input type="radio" name="abo" value="épique"/>
 			<label for="rare">EPIQUE</label>
 			<input type="radio" name="abo" value="légendaire"/>
 			<label for="rare">LEGENDAIRE</label>

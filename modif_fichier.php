@@ -17,7 +17,7 @@ function create_tab(){
 		"ID" => $_POST["Id"],
 		"BRAWLER" => $_POST["Perso"],
 		"MODE" => $_POST["Mode"],
-		"ABONNEMENT" =>$_POST["Abonnement"];
+		"ABONNEMENT" => $_POST["Abonnement"],
 	);
 	
 	foreach($tab as $key => $value){
