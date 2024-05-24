@@ -45,13 +45,15 @@
                     "id" => get_player_info($user, "ID"),
                     "brawler" => get_player_info($user, "BRAWLER"),
                     "MODE" => get_player_info($user, "MODE"));
+
                 }
 
                 $information_recent_users = array_reverse($information_recent_users);
 
-                foreach($information_recent_users as $user){
-                    $tag="<div> bgcolor='grey' margin='15px'> $user[nick]</div>";
-                    echo("<div style='background-color:grey;margin:15px'> $user[nick] </div>"); //appliquer le style avec un fichier css
+                foreach($information_recent_users as $user => $value){
+                    if ( !in_array(false, $value)){
+                    echo("<div style='background-color:grey;margin:15px'> <a href='page.php?id=$user'>$value[nick] </a> </div>"); //appliquer le style avec un fichier css
+                    }
                 }
             ?>
 
