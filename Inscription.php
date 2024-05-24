@@ -31,6 +31,12 @@
 					display_mode();
 				?>
 			</datalist>
+			<input type="radio" name="abo" value="rare"/>
+			<label for="rare">RARE</label>
+			<input type="radio" name="abo" value="epique"/>
+			<label for="rare">EPIQUE</label>
+			<input type="radio" name="abo" value="légendaire"/>
+			<label for="rare">LEGENDAIRE</label>
 			<input type="reset" />
 			<input type="submit" name="Submit" value="S'inscrire"/>
 		</form>
