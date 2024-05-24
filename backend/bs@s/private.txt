@@ -1,0 +1,10 @@
+NOM:Bojour
+PRENOM:Salut
+PSEUDO:bs
+BRAWLNAME:bgy
+PASSWORD:bs
+MAIL:bs@s
+ID:jkl
+BRAWLER:Darryl
+MODE:Survivant Duo
+ABONNEMENT:épique

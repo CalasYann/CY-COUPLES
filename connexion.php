@@ -24,5 +24,6 @@
     <br>
     <div>
         <a href="Inscription.php">S'inscrire</a>
+        <a href="connect_admin.php">Je suis ADMIN</a>
     </div>
 </body>
