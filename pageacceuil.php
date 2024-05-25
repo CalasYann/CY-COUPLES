@@ -12,7 +12,7 @@
       </div>
 
       <div class="buttons">
-        <a href="connection.php"><button class="custom-btn btn-1" href="connection.php">CONNECTION</button></a>
+        <a href="connection.php"><button class="custom-btn btn-1" href="connection.php">CONNEXION</button></a>
 
       </div>
     </nav>
@@ -70,9 +70,9 @@
 </tr>
 </table>
 </br>
-<div class="c1">Prix : 9.99 € (ça commence à être un peu plus interessant)</div>
+<div class="c1">Prix : 7.99 € (ça commence à être un peu plus interessant)</div>
 </br>
-- Wow, tu es un utilisateur épique. Tu peux.?.?.?.?.?
+- Wow, tu es un utilisateur épique. Tu peux faire des recherches plus avancées. Trouve vraiment le mate qui te convient selon des critères bien précis que tu pourras sélectionner.
 
 
 </div>
@@ -89,9 +89,9 @@
 </tr>
 </table>
 </br>
-<div class="c1">Prix : 14.99 € (c'est légendaire quand même faut pas déconner)</div>
+<div class="c1">Condition : Etre en possession du grand seul et unique SPIKE CACA</div>
 </br>
-- LEGENDAIRE, C'EST UN TRUC DE FOU. Tu as débloqué l'accès à la totalité de notre univers. Rencontre, discute, recherche. Trouve les GENTLEMATES</br> parfaits pout t'amuser comme un petit fou !
+- Si tu es légendaire c'est que tu fais partie de l'élite. Détenteur de spike caca, tu seras forcément un des utilisateurs les plus important de notre site.
 
 </div>
 </br>
