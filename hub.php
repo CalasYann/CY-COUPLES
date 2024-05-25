@@ -13,15 +13,26 @@
         
             <?php 
                 if ($_SESSION["admin"] !="connected"){
-                    echo "<div id='test'>";
-                    echo('<a href="test_browsing_players.php"> <button id="rechercherMates">Rechercher des Mates</button> </a>
-                    <a href="connexion.php"> <button id="connecion">Se connecter</button> </a>
-                    <a href="Inscription.php"><button>S inscrire</button></a>
-                    <a href="Profils.php?error=0"><button>Profil</button></a>
-                    <a href="deconnect.php"><button>Se Deconnecter</button></a>
-                    <form id="full-info">
-                    </form>');
-                    echo('</div>');
+                    echo('
+                    <table class="d1">
+                    <tr>
+	                <th class="e2" width="250"><img src="./Brawlstars.png" /></th>
+                    </tr>
+                    </table>
+                    <p2>
+                    <form  method="post" action="register.php">
+                    <h4>BIENVENUE !!</h4>
+                    <hr>
+                    </br>
+                    <div class="div1">
+                        </br><div class="div4">
+                        <a href="test_browsing_players.php"> <button class="b1" id="rechercherMates">Rechercher des Mates</button> </a>
+                       
+                        <a href="Profils.php?error=0"><button class="b1">Profil</button></a>
+                
+                        <a href="deconnect.php"><button class="b1">Se Deconnecter</button></a>
+                        </div></form></p2></br></br>');
+                    
                 }else{
                     echo('<h3>Vous êtes actuellement sur la page admin du site</h3>');
                 }
@@ -29,9 +40,8 @@
         
             <?php
             if( is_file("./backend/".$_SESSION['mail']."/bio.txt") == false){
-                echo("<div id='update_profile'>");
-                echo("<p id='pr_msg'>"."<a href='page.php?id=".$_SESSION['mail']."'>Complétez votre profil</a> </p>");
-                echo("</div>");
+                
+                echo("<p class='p8' id='pr_msg'>"."<a class='a1' href='page.php?id=".$_SESSION['mail']."'>Complétez votre profil</a> </p></br>");
             }
                 
 
