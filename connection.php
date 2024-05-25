@@ -22,7 +22,7 @@
                 <input name="password" id="password" type="password" size="10"/>
 			    </div></br><div class="div3">
 			        <input type="reset" />
-			        <input type="submit" name="submit" value="Se Connecter"/>
+			        <input type="submit" name="submit" href="hub.php" value="Se Connecter"/>
                 </div></br>
                 <p1>Vous n'avez pas encore de compte ? <a class="a1" href="inscription.php">S'inscrire</a></p1>
             </div>
