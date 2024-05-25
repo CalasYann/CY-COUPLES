@@ -20,7 +20,7 @@
                     </tr>
                     </table>
                     <p2>
-                    <form  method="post" action="register.php">
+                    
                     <h4>BIENVENUE !!</h4>
                     <hr>
                     </br>
@@ -31,7 +31,7 @@
                         <a href="Profils.php?error=0"><button class="b1">Profil</button></a>
                 
                         <a href="deconnect.php"><button class="b1">Se Deconnecter</button></a>
-                        </div></form></p2></br></br>');
+                        </div></p2></br></br>');
                     
                 }else{
                     echo('<h3>Vous êtes actuellement sur la page admin du site</h3>');

@@ -10,7 +10,7 @@
     </tr>
     </table>
     <p2>
-    <form  method="post" action="register.php">
+    <form  method="post" action="connexion2.php">
             <h4>CONNEXION</h4>
             <hr>
             <div class="div1">
