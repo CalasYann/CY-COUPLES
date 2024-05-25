@@ -25,10 +25,13 @@
                     else{
                         $player_nick = "player nick";
                     }
-                    echo "<div>\n";
-                    echo("<img id=player_icon src='https://preview.redd.it/show-penny-some-love-v0-j9w5ibmxunjc1.jpeg?auto=webp&s=694a604721725b039a43ccb69f04630155e7b848'>");
+                    echo ("<div class='d1'>");
+                    echo("<img id=player_icon src='./penny.png'>");
+                    
+                    echo("<span id='player_nick'>Pseudo : $player_nick</span></br>");
+                    echo("<span id='player_bs'>Brawlname : $player_bs</span></br>");
+                    echo("<span id='player_main'>Brawler : $player_main</span></br>");
                     echo("</div>");
-                    echo("<span id='player_nick'>$player_nick</span>");
                 ?>
 
 
@@ -51,7 +54,6 @@
                         echo($_GET["id"]);
                     ?>";
         </script>
-
-        <script src="page.js"></script>
+<script src="page.js"></script>
     </body>
 </html>
