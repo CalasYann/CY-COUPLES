@@ -13,10 +13,11 @@
         <title>Recherche</title>
         <script src ="browse_search.js">
         </script>
+        <link rel="stylesheet" type="text/css" href="recherche.css">
     </head>
     <body>
         <form id="browsing_data" action="browse_players.php" method="post">
-            <input id="mode_field" name="mode" list="mode" placeholder="Mode préféré">
+            <input class = "p1" id="mode_field" name="mode" list="mode" placeholder="Mode préféré">
             <datalist id ="mode">
                 <?php
                     display_mode();
@@ -29,7 +30,7 @@
                     display_brawlers();
                 ?>
             </datalist>
-            <input type="button" value="Rechercher" onclick="sendData()">
+            <input class="b1" type="button" value="Rechercher" onclick="sendData()">
             
         </form>
 
@@ -52,7 +53,7 @@
 
                 foreach($information_recent_users as $user => $value){
                     if ( !in_array(false, $value)){
-                    echo("<div style='background-color:grey;margin:15px'> <a href='page.php?id=$user'>$value[nick] </a> </div>"); //appliquer le style avec un fichier css
+                    echo("<div style='background-color:crimson;margin:15px'> <a href='page.php?id=$user'>$value[nick] </a> </div>"); //appliquer le style avec un fichier css
                     }
                 }
             ?>
