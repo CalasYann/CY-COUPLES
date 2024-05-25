@@ -6,10 +6,10 @@ function send_message(text){
     
     
     params = "USER=" + user;
-    params += "&TARGET=" + user;
+    params += "&TARGET=" + target;
     params += "&MSG=" + data;
 
-    xhr.open("POST", "messages.php", true);
+    xhr.open("POST", "messages_process.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send(params);
     console.log(data);
@@ -44,4 +44,4 @@ var messagerie = document.getElementById("mes");
 
 
 
-messagerie.addEventListener("click", messages_pop_up_window);
+//messagerie.addEventListener("click", messages_pop_up_window);

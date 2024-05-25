@@ -1,6 +1,8 @@
 <?php
 
     require_once("get_user_info.php");
+    session_start();
+    require_once("test_session.php");
 
 ?>
 
@@ -33,7 +35,9 @@
 
 
                 <div id="messagerie_zone">
-                    <button id="mes">messagerie</button>
+                    <a  href="messages.php?TARGET=<?php
+                       echo(trim($_GET["id"]));
+                    ?>">   <button id="mes">messagerie</button></a>
                 </div>
             </div>
 
@@ -46,10 +50,15 @@
                 echo($_SESSION["mail"]);
             ?>";
 
+            
+
             var target =
                     "<?php 
                         echo($_GET["id"]);
                     ?>";
+
+            console.log(user);
+            console.log(target);
         </script>
 
         <script src="page.js"></script>
