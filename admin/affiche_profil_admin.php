@@ -1,5 +1,14 @@
 <?php 
 session_start();
+if (!isset($_SESSION['admin'])) {
+    header('Location: ../pageacceuil.php');
+}
+elseif ($_SESSION['admin']!='connected'){
+    header('Location: ../pageacceuil.php');
+}
+
+
+
 require_once('profil_admin.php');
 require_once('display_profil.php');
 if(isset($_POST['Profil'])){

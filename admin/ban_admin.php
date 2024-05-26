@@ -1,5 +1,12 @@
 <?php 
+
 session_start();
+if (!isset($_SESSION['admin'])) {
+    header('Location: ../pageacceuil.php');
+}
+elseif ($_SESSION['admin']!='connected'){
+    header('Location: ../pageacceuil.php');
+}
 
 $fichier=fopen("../backend/ban.txt","a");
 

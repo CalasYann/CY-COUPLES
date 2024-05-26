@@ -6,6 +6,7 @@ if (!isset($_SESSION['admin'])) {
 elseif ($_SESSION['admin']!='connected'){
     header('Location: ../pageacceuil.php');
 }
+
 ?>
 <!DOCTYPE html>
 <?php
@@ -38,5 +39,6 @@ require_once('display_profil.php');
     </datalist>
     <input type="submit" name="profil_button" value="consulter le profil"/>
     </form> 
+    <a href="../hub.php"><button class="b1">Hub</button></a>
 </body>
 </html>
