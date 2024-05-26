@@ -20,7 +20,8 @@
                     </tr>
                     </table>
                     <p2>
-                    
+                    <div class="d6">
+		    </br>
                     <h4>BIENVENUE !!</h4>
                     <hr>
                     </br>
@@ -30,18 +31,18 @@
                        
                         <a href="Profils.php?error=0"><button class="b1">Profil</button></a>
                 
-                        <a href="deconnect.php"><button class="b1">Se Deconnecter</button></a>
-                        </div></p2></br></br>');
+                        <a href="deconnect.php?id=1"><button class="b1">Se Deconnecter</button></a>
+                        </div></p2></br></br></div>');
                         if( is_file("./backend/".$_SESSION['mail']."/bio.txt") == false){
                 
-                            echo("<p class='p8' id='pr_msg'>"."<a class='a1' href='page.php?id=".$_SESSION['mail']."'>Complétez votre profil</a> </p></br>");
+                            echo("<p class='p8' id='pr_msg'>"."<a class='a1' href='page.php?id=".$_SESSION['mail']."'>Aperçu de mon profil</a> </p></br>");
                         }
                            
                     
                 }else{
                     echo('<h3>Vous êtes actuellement sur la page admin du site</h3>');
                     echo('<a href="admin/recherche_admin.php?erreur=0"><button class="b1">Rechercher des Profils</button></a>');
-                    echo('<a href="../deconnect.php"><button class="b1">Se deconnecter</button></a>');
+                    echo('<a href="../deconnect.php?id=1"><button class="b1">Se deconnecter</button></a>');
                 }
             ?>
         

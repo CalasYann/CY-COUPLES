@@ -9,6 +9,11 @@ if( file_exists ($file)){
      unlink($file);
 }
 
+$file='backend/'.$_SESSION['mail'].'/block.txt';
+
+if( file_exists ($file)){
+     unlink($file);
+}
 
 rmdir('backend/'.$_SESSION['mail']);
 

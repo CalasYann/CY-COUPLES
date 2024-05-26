@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="admin.css">
+    <link rel="stylesheet" type="text/css" href="connect_admin.css">
     <title>Connexion admin</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
     </table>
     <p2>
     <form  method="post" action="verif_admin.php">
-            <h4>CONNECTION ADMIN</h4>
+            <h4>CONNEXION ADMIN</h4>
             <hr>
             <div class="div1">
                 </br><div class="div4">

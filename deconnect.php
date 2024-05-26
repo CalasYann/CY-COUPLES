@@ -6,7 +6,11 @@ function deconnect(){
     header("Location:pageacceuil.php");
 
 }
+if(isset($_GET["id"])){
+    session_start();
+    deconnect();
+}else{
+    deconnect();
+}
 
-session_start();
-deconnect();
 ?>

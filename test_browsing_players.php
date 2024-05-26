@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once("browse_players.php");
 require_once("test_session.php");
 ?>
 <!DOCTYPE html>
@@ -7,7 +7,6 @@ require_once("test_session.php");
     <head>
 
         <?php
-            
             require_once("list_brawlers.php");
             require_once("list_mode.php");
             require_once("browse_players.php");
@@ -56,7 +55,7 @@ require_once("test_session.php");
 
                 foreach($information_recent_users as $user => $value){
                     if ( !in_array(false, $value)){
-                    echo("<div class='player'> <a href='page.php?id=$user'>$value[nick] </a> </div>"); //appliquer le style avec un fichier css
+                    echo("<div class='player'> <a class='a8' href='page.php?id=$user'>$value[nick] </a> </div>"); //appliquer le style avec un fichier css
                     }
                 }
             ?>

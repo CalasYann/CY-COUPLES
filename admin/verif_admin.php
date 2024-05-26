@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     $file=file("../backend/admin.txt");
     if(isset($file)){
         $c=$file[0];

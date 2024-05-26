@@ -30,7 +30,9 @@ function create_tab(){
 
 
 
-
+function verif_form($tab){
+	return true;
+}
 
 
 function update($tab){
