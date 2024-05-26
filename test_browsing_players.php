@@ -18,6 +18,7 @@ require_once("test_session.php");
         <link rel="stylesheet" type="text/css" href="recherche.css">
     </head>
     <body>
+        <a class="a8" href="hub.php" class="topbar_home"><button class="b1" id="retouracceuil">Retour à l'accueil</button></a>
         <form id="browsing_data" action="browse_players.php" method="post">
             <input class = "p1" id="mode_field" name="mode" list="mode" placeholder="Mode préféré">
             <datalist id ="mode">
