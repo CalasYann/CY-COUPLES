@@ -54,5 +54,10 @@ header{
 #msg_to_user{
     position: relative;
     left:70%;
+}
 
+.delete{
+    width:20px;
+    height: 20px;
+    
 }

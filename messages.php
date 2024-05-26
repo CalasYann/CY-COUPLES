@@ -29,9 +29,14 @@
                     }
                 }
                 elseif ($_SESSION["admin"] == "connected"){
+                    $usr = $_SESSION["mail"];
+                    $all_conversations = getAllMessageHistory($usr);
+                    foreach($all_conversations as $conv){
+                        echo("<div><a href='messages.php?TARGET=".$conv."'>".get_player_info($conv, "PSEUDO")."</a></div>");
 
+                    }
                 
-
+                }
 
                 ?>
                 
@@ -44,7 +49,7 @@
                 <div id="end_div">
                     <input type="text" id="textbar">
                     <button id="send">envoyer</button>
-                    <button id ="refresh">Rafraîchir</buttoni>
+                    <button id ="refresh">Rafraîchir</button>
                 </div>
             </div>
         </div>
