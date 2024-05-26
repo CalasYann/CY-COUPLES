@@ -31,7 +31,7 @@
                        
                         <a href="Profils.php?error=0"><button class="b1">Profil</button></a>
                 
-                        <a href="deconnect.php"><button class="b1">Se Deconnecter</button></a>
+                        <a href="deconnect.php?id=1"><button class="b1">Se Deconnecter</button></a>
                         </div></p2></br></br></div>');
                         if( is_file("./backend/".$_SESSION['mail']."/bio.txt") == false){
                 
@@ -42,7 +42,7 @@
                 }else{
                     echo('<h3>Vous êtes actuellement sur la page admin du site</h3>');
                     echo('<a href="admin/recherche_admin.php?erreur=0"><button class="b1">Rechercher des Profils</button></a>');
-                    echo('<a href="../deconnect.php"><button class="b1">Se deconnecter</button></a>');
+                    echo('<a href="../deconnect.php?id=1"><button class="b1">Se deconnecter</button></a>');
                 }
             ?>
         

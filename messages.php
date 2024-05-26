@@ -1,7 +1,7 @@
 <?php
-    session_start();
-    require_once("test_session.php");
     require_once("messages_process.php");
+    require_once("test_session.php");
+    
     require_once("get_user_info.php");
 ?>
 
