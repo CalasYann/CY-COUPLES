@@ -51,7 +51,7 @@
 		}
 	
 	?>
-</br><p class="p1">_________________________________________________________________________________________________________________________________________________________</p></br></br>
+</br><hr></br></br>
     
     <!-- Informations -->
 <table class="d1">
@@ -68,7 +68,7 @@
 </tr>
 </table>
 </br>
-<p class="p1">_________________________________________________________________________________________________________________________________________________________</p>
+<hr>
 </br>
 <div class="p2">
 <table>
@@ -88,7 +88,7 @@
 
 </div>
 </br>
-<p class="p1">_________________________________________________________________________________________________________________________________________________________</p>
+<hr>
 </br>
 <div class="p2">
 <table>
@@ -102,12 +102,12 @@
 </br>
 <div class="c1">Prix : 7.99 € (ça commence à être un peu plus interessant)</div>
 </br>
-- Wow, tu es un utilisateur épique. Tu peux faire des recherches plus avancées. Trouve vraiment le mate qui te convient selon des critères bien précis que tu pourras sélectionner.
+- Wow, tu es un utilisateur épique. Tu peux faire des recherches plus avancées et envoyer des messages avec les autres utlisateurs. Trouve vraiment le mate qui te convient selon des critères bien précis que tu pourras sélectionner.
 
 
 </div>
 </br>
-<p class="p1">_________________________________________________________________________________________________________________________________________________________</p>
+<hr>
 </br>
 <div class="p2">
 <table>
@@ -125,10 +125,10 @@
 
 </div>
 </br>
-<p class="p1">_________________________________________________________________________________________________________________________________________________________</p></br></br></br>
+<hr></br></br></br>
 
 <a href="Inscription.php"><button class="custom-btn1 btn-2" href="inscription.php">INSCRIPTION</button></a>
 
-</br></br></br><p class="p1">_________________________________________________________________________________________________________________________________________________________</p>
+</br></br></br><hr>
 </body>
 </html>

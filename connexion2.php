@@ -8,7 +8,6 @@ $users = array();
 $i = 0;
 
 $email_request = $_POST["email"];
-
 $email_request = trim($_POST["email"]);
 
 
@@ -22,6 +21,7 @@ foreach($dir as $file) {
 
 foreach($users as $user) {
     if($user == $email_request) {
+        
         $buffer_line = "";
         $file = fopen("./backend/".$email_request."/private.txt", "r");
         for ($j = 0; $j < 4; $j++) {
@@ -39,20 +39,19 @@ foreach($users as $user) {
         }
 
         if ($_POST["password"] == $buffer_password){
+            $i="pip";
             $_SESSION["mail"]=$_POST["email"];
             $_SESSION["admin"]=0;
             header("Location:hub.php");
-            break;
+            die;
         }
         else{
             header("Location:pageacceuil.php?ERROR=co"); //renvoyer vers la page de connexion avec une erreur
-            break;
-        } 
-    }else{
-            header("Location:pageacceuil.php?ERROR=co"); //renvoyer vers la page de connexion avec une erreur
-            break;
+            die;
+        }
     }
-    
 }
+
+header("Location:pageacceuil.php?ERROR=co"); //renvoyer vers la page de connexion avec une erreur
 
 ?>
