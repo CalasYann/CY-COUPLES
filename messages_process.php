@@ -75,10 +75,21 @@ function getAllMessageHistory($user){
     $i = 0;
     foreach ($dir as $file) {
             if (str_contains($file->getFilename(),$user)) {
-                $data[$i] = $file->getFilename();
-                $file_temp = fopen("".$file->getFilename(),"r");
+                //$data[$i] = $file->getFilename();
+                $buffer_name = explode(":", $file->getFilename());
+                $f1 = $buffer_name[0];
+                $f2 = $buffer_name[1];
+                if ($f1 == $user){
+                    $target ==  $f2;
+                }
+                else{
+                    $target == $f1;
+                }
+                $data[$i] = $target;
+                $i++;
             }
         }
+    return $data;
 }
 
 if ( isset($_POST["functionname"])){
