@@ -15,7 +15,7 @@ a1{
 }
 
 .p8{
-    margin-left: 225px;
+    margin-left: 275px;
 }
 
 
@@ -115,3 +115,11 @@ input[type="reset"]{
      background: crimson;
   background: linear-gradient(0deg, crimson 0%, crimson 100%);
   }
+
+.d6{
+    border-radius: 10px;
+    border: solid;
+    border-color: white;
+    width: 700px;
+    height: 200px;
+}

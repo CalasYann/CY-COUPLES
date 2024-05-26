@@ -1,15 +1,17 @@
 body{
     background-color: #2c3f66;
-}
-.p1{
-    margin-left: 15px;
-    margin-top: 15px;
+    color: white;
 }
 
-
+.div3{
+    border: solid;
+    border-color: crimson;
+    width: 400px;
+    border-radius: 10px;
+}
 
 .b1 {
-    width: 130px;
+    width: 180px;
     height: 40px;
     color: #fff;
     border-radius: 5px;
@@ -37,20 +39,3 @@ body{
      background: crimson;
   background: linear-gradient(0deg, crimson 0%, crimson 100%);
   }
-
-
-.player{
-  background : crimson;
-  width : 447px;
-  height : 80px;
-  padding : 15px;
-  margin : 15px;
-  color : white;
-  border : solid;
-  border-color : white;
-  border-radius: 5px;
-}
-
-.a8{
-  color: #2c3f66;
-}

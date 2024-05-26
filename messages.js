@@ -82,6 +82,16 @@ function displayMessages(data, user, target){
         msg_element.innerHTML = data[i]["msg"];
         console.log(msg_element.innerHTML);
         container.appendChild(msg_element);
+
+        var del_icon = document.createElement("img");
+        del_icon.classList.add("delete");
+        del_icon.src = "trash-icon.png";
+
+        var del = document.create("a");
+        del.href = "google.com";
+
+        del.appendChild(del_icon);
+        msg_element.appendChild(del);
     }
 }
 
