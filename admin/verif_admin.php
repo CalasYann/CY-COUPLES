@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    $file=file("backend/admin.txt");
+    $file=file("../backend/admin.txt");
     if(isset($file)){
         $c=$file[0];
         $li=explode(':',$c);
@@ -21,14 +21,14 @@
         if(trim($id)==trim($_POST["ID"]) && trim($pwd)==trim($_POST["PASSWORD"])){
             $_SESSION["admin"]="connected";
             $_SESSION["mail"]=1;
-            header("Location: hub.php");
+            header("Location: ../hub.php");
         }
         else{
-            header("Location: pageacceuil.php");
+            header("Location: ../pageacceuil.php");
         }
 
     }else{
-        header("Location: pageacceuil.php");
+        header("Location: ../pageacceuil.php");
     }
 
 

@@ -24,7 +24,8 @@
 			        <input type="reset" />
 			        <input type="submit" name="submit" href="hub.php" value="Se Connecter"/>
                 </div></br>
-                <p1>Vous n'avez pas encore de compte ? <a class="a1" href="inscription.php">S'inscrire</a></p1>
+                <p1>Vous n'avez pas encore de compte ? <a class="a1" href="inscription.php">S'inscrire</a></p1><br>
+                <p1>Vous êtes admin ? <a class="a1" href="admin/connect_admin.php">Se connecter en tant qu'admin</a></p1>
             </div>
 	</form>
     </p2>    

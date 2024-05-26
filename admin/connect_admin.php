@@ -9,7 +9,7 @@
 
 <table class="d1">
     <tr>
-	<th class="e2" width="250"><img src="./Brawlstars.png" /></th>
+	<th class="e2" width="250"><img src="../Brawlstars.png" /></th>
     </tr>
     </table>
     <p2>
