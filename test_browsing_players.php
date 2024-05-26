@@ -53,7 +53,7 @@
 
                 foreach($information_recent_users as $user => $value){
                     if ( !in_array(false, $value)){
-                    echo("<div style='background-color:crimson;margin:15px'> <a href='page.php?id=$user'>$value[nick] </a> </div>"); //appliquer le style avec un fichier css
+                    echo("<div class='player'> <a href='page.php?id=$user'>$value[nick] </a> </div>"); //appliquer le style avec un fichier css
                     }
                 }
             ?>

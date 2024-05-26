@@ -16,6 +16,7 @@
         </div>
         <div id="main">
             <div id="navbar">
+                
 
             </div>
             <div id="chatbox">

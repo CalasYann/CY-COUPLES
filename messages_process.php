@@ -68,6 +68,19 @@ function Messages($user, $target){
     }
 }
 
+
+function getAllMessageHistory($user){
+    $data = array();
+    $dir = new FilesystemIterator(dirname(__FILE__)."/messages");
+    $i = 0;
+    foreach ($dir as $file) {
+            if (str_contains($file->getFilename(),$user)) {
+                $data[$i] = $file->getFilename();
+                $file_temp = fopen("".$file->getFilename(),"r");
+            }
+        }
+}
+
 if ( isset($_POST["functionname"])){
     $aResult = array();
     $aResult['result'] = Messages($_POST['arguments'][0], $_POST['arguments'][1]);

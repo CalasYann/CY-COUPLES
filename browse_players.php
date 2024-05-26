@@ -136,7 +136,8 @@ foreach($users_final as $key => $value){
                                      "nick_bs" => get_player_info($value, "BRAWLNAME"),
                                      "id" => get_player_info($value, "ID"),
                                      "brawler" => get_player_info($value, "BRAWLER"),
-                                     "MODE" => get_player_info($value, "MODE"));
+                                     "MODE" => get_player_info($value, "MODE"),
+                                    "mail" => $value);
 }
 
 //encoder toutes les informations nécessaires dans le fichier json
