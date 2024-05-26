@@ -40,7 +40,7 @@
                     
                 }else{
                     echo('<h3>Vous êtes actuellement sur la page admin du site</h3>');
-                    echo('<a href="admin/recherche_admin.php"><button class="b1">Rechercher des Profils</button></a>');
+                    echo('<a href="admin/recherche_admin.php?erreur=0"><button class="b1">Rechercher des Profils</button></a>');
                 }
             ?>
         

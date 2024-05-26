@@ -15,6 +15,6 @@ rmdir('../backend/'.$_SESSION['mail']);
 
 $_SESSION["mail"]=1;
 
-header("Location: recherche_admin.php");
+header("Location: recherche_admin.php?erreur==0");
 
 ?>

@@ -7,4 +7,4 @@ MAIL:le_nestn@outlook.fr
 ID:#123456
 BRAWLER:Penny
 MODE:Brawlball
-ABONNEMENT:
+ABONNEMENT:épique

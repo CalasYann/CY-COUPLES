@@ -1,6 +1,6 @@
 <?php
 
-    function display_profil(){
+    function display_profil($use){
         $list_profil=array();
         $file=file("../backend/logs_register.txt");
         $total=count($file);   
@@ -10,8 +10,14 @@
                 array_push($list_profil, trim($c[1]));
             }
         }
-        foreach($list_profil as $profil){
-            echo("<option value='$profil'>$profil</option>");
+        
+        if($use==1){
+            foreach($list_profil as $profil){
+                echo("<option value='$profil'>$profil</option>");
+            }
+        }
+        else if($use== 2){
+            return $list_profil;
         }
 
     }
