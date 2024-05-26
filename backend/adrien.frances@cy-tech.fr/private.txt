@@ -1,9 +1,0 @@
-NOM:Frances
-PRENOM:Adrien
-PSEUDO:adrien
-BRAWLNAME:adri_95
-PASSWORD:adrienbrawlstars
-MAIL:adrien.frances@cy-tech.fr
-ID:#987654321
-BRAWLER:Jessie
-MODE:Survivant Solo
