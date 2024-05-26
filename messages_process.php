@@ -37,9 +37,16 @@ $filename = FileName($user, $target);
 }
 
 function storeMessageData($user, $target, $text, $filename) {
+    $id = 0;
+    if (is_file("./messages/".$filename.".txt")){
+        $file_read_id = fopen("./messages/".$filename.".txt","r");
+        for ($i = 0; $i < count(file("./messages/".$filename.".txt")); $i++){
+            $id++;
+        }
+    }                         
     $file = fopen("./messages/".$filename.".txt","a");
     $date = date("d-m-Y-H-i-s");
-    $data = $date.":".$user.":".$target.":".$text."\n";
+    $data = $date.":".$user.":".$target.":".$text.":".$id."\n";
 
 
     fwrite($file, $data);
@@ -47,17 +54,18 @@ function storeMessageData($user, $target, $text, $filename) {
     fclose($file);
 }
 
+
 function Messages($user, $target){
     $data= array();
     $filename = FileName($user, $target);
     if (is_file("./messages/".$filename.".txt")) {
-        $file = fopen("./messages/".$filename.".txt","r");
+        $file = fopen("./messages/".$filename.".txt","r");                         
         $number_lines = count(file($file));
         $data["nbr"] = $number_lines;
         for ($i = 0; $i < $number_lines; $i++){
             $buffer_line = fgets($file);
             $buffer_table = explode(":", $buffer_line);
-            $data[$i] = array("date" => $buffer_table[0], "user" => $buffer_table[1], "target" => $buffer_table[2]);
+            $data[$i] = array("date" => $buffer_table[0], "user" => $buffer_table[1], "target" => $buffer_table[2], "msg" => $buffer_table[3], "id" => $buffer_table[4]);
         }
         fclose($file);
 
@@ -113,6 +121,28 @@ function AdminGetAllMessageHistory($user){
         $i++;
     }
     return $data;
+}
+
+function deleteMessage($user, $target, $msg_id){
+    //$new_file_table = array();
+    $file = fopen("./messages/".FileName($user, $target).".txt","r");
+    $line_tbd = "";
+    $buffer_line = "";
+    $id_from_file = "";
+    $number_lines = count(file("./messages/".FileName($user, $target).".txt"));
+    $i = 0;
+
+    while ($i < $number_lines && $id_from_file != $msg_id){
+        $buffer_line = fgets($file);
+        $id_from_file = explode(":", $buffer_line)[4];
+        $i++;
+    }    
+
+
+    $contents = file_get_contents("./messages/".FileName($user, $target).".txt");
+    $contents = str_replace($buffer_line,"", $contents);
+    file_put_contents("./messages/".FileName($user, $target).".txt", $contents);
+
 }
 
 if ( isset($_POST["functionname"])){
