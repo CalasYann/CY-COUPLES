@@ -6,9 +6,16 @@ if (!isset($_SESSION['admin'])) {
 elseif ($_SESSION['admin']!='connected'){
     header('Location: ../pageacceuil.php?ERROR=admin');
 }
+?>
 
 
-
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="profil_admin.css">
+    </head>
+    <body>
+<?php
 require_once('profil_admin.php');
 require_once('display_profil.php');
 if(isset($_POST['Profil'])){
@@ -33,3 +40,6 @@ if($verif== 1){
 }
 
 ?>
+
+</body>
+</html>
