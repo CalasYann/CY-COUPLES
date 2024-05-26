@@ -14,7 +14,7 @@
     </table>
     <p2>
     <form  method="post" action="verif_admin.php">
-            <h4>CONNECTION ADMIN</h4>
+            <h4>CONNEXION ADMIN</h4>
             <hr>
             <div class="div1">
                 </br><div class="div4">
