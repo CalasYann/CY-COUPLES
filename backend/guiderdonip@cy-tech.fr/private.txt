@@ -1,9 +1,0 @@
-NOM:Guiderdoni
-PRENOM:Paul
-PSEUDO:Paulo
-BRAWLNAME:PauloAPVC
-PASSWORD:PauloAPVC-mdp
-MAIL:guiderdonip@cy-tech.fr
-ID:#123456
-BRAWLER:Fang
-MODE:Brawlball

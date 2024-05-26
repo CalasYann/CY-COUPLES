@@ -8,7 +8,7 @@ require_once('display_profil.php');
 
 </head>
 <body>
-    <form method="POST" action="profil_admin.php">
+    <form method="POST" action="affiche_profil_admin.php">
      </datalist>
     <input list="profil" name="Profil" placeholder="entrez une adresse mail"/>
     <datalist id="profil"> 
