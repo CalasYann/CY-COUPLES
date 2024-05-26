@@ -9,7 +9,7 @@ body{
 
 
 .b1 {
-    width: 130px;
+    width: 200px;
     height: 40px;
     color: #fff;
     border-radius: 5px;
@@ -49,8 +49,14 @@ body{
   border : solid;
   border-color : white;
   border-radius: 5px;
+  text-align: center;
+  margin-left: 525px;
 }
 
 .a8{
   color: #2c3f66;
+}
+
+form{
+  text-align: center;
 }
