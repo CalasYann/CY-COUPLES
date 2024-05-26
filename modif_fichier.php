@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+require_once("test_session.php");
 //faire des verifs sur la connexion, l'existence de l'email, verif sur l'ancien mot de passe
 
 //recevoir le formulaire, modifier le fichier
@@ -29,9 +30,7 @@ function create_tab(){
 
 
 
-function verif_form($tab){
-	return true;
-}
+
 
 
 function update($tab){

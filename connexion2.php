@@ -8,8 +8,7 @@ $users = array();
 $i = 0;
 
 $email_request = $_POST["email"];
-$_SESSION["mail"]=$_POST["email"];
-$_SESSION["admin"]=0;
+
 $email_request = trim($_POST["email"]);
 
 
@@ -40,15 +39,20 @@ foreach($users as $user) {
         }
 
         if ($_POST["password"] == $buffer_password){
+            $_SESSION["mail"]=$_POST["email"];
+            $_SESSION["admin"]=0;
             header("Location:hub.php");
             break;
         }
-        
         else{
-            header("Location:connexion.php"); //renvoyer vers la page de connexion avec une erreur
+            header("Location:pageacceuil.php?ERROR=co"); //renvoyer vers la page de connexion avec une erreur
             break;
-        }
+        } 
+    }else{
+            header("Location:pageacceuil.php?ERROR=co"); //renvoyer vers la page de connexion avec une erreur
+            break;
     }
+    
 }
 
 ?>

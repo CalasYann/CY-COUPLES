@@ -1,10 +1,10 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin'])) {
-    header('Location: ../pageacceuil.php');
+    header('Location: ../pageacceuil.php?ERROR=admin');
 }
 elseif ($_SESSION['admin']!='connected'){
-    header('Location: ../pageacceuil.php');
+    header('Location: ../pageacceuil.php?ERROR=admin');
 }
 
 ?>
@@ -19,12 +19,6 @@ require_once('display_profil.php');
 <body>
 
     <?php
-    if (!isset($_SESSION['admin'])) {
-        header('Location: ../pageacceuil.php');
-    }
-    elseif ($_SESSION['admin']!='connected'){
-        header('Location: ../pageacceuil.php');
-    }
     if($_GET["erreur"]==1){
         echo"Profil introuvable";
     }

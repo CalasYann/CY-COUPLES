@@ -5,7 +5,7 @@ if (isset($_SESSION["mail"])){
 
 }else{ 
     $state= 0;
-    header("Location: pageacceuil.php");
+    header("Location: pageacceuil.php?ERROR=sess");//vous n'êtes pas connecté
 }
 
 ?>

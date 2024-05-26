@@ -21,6 +21,36 @@
     <header>
       <h1>BIENVENUE SUR BRAWL MATE !!</h1>
     </header>
+	<?php
+		//Affichage du message d'erreur.
+
+		if(isset($_GET["ERROR"])){
+			switch($_GET["ERROR"]){
+				case "ban":
+					echo("<h3>Vous êtes Bannis</h3>");	
+				break;
+				case "email":
+					echo("<h3>Email déjà utilisé</h3>");	
+				break;
+				case "profil":
+					echo("<h3>Echec de la création du compte</h3>");	
+				break;
+				case "sess":
+					echo("<h3>Vous  n'êtes pas connectés</h3>");	
+				break;
+				case "admin":
+					echo("<h3>Vous n'êtes pas un administrateur</h3>");	
+				break;
+				case "co":
+					echo("<h3>Erreur dans le mot de passe ou l'email</h3>");	
+				break;
+				case "adminerr":
+					echo("<h3>Problème interne admin</h3>");	
+				break;
+			}
+		}
+	
+	?>
 </br><p class="p1">_________________________________________________________________________________________________________________________________________________________</p></br></br>
     
     <!-- Informations -->

@@ -1,7 +1,5 @@
 <?php
-
 require_once("messages_process.php");
-
 function Messages2($user, $target){
     $data= array();
     $filename = FileName($user, $target);

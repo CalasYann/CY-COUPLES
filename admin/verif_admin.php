@@ -1,12 +1,5 @@
 <?php
 
-    session_start();
-    if (!isset($_SESSION['admin'])) {
-        header('Location: ../pageacceuil.php');
-    }
-    elseif ($_SESSION['admin']!='connected'){
-        header('Location: ../pageacceuil.php');
-    }
     $file=file("../backend/admin.txt");
     if(isset($file)){
         $c=$file[0];
@@ -30,11 +23,11 @@
             header("Location: ../hub.php");
         }
         else{
-            header("Location: ../pageacceuil.php");
+            header("Location: ../pageacceuil.php?ERROR=co");//erreur de mot de passe ou d'email
         }
 
     }else{
-        header("Location: ../pageacceuil.php");
+        header("Location: ../pageacceuil.php?ERROR=adminerr");//le fichier admin n'existe pas
     }
 
 

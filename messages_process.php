@@ -1,4 +1,7 @@
 <?php
+session_start();
+require_once("test_session.php");
+
 if ( isset($_POST["USER"]) && isset( $_POST["TARGET"])  && isset( $_POST["MSG"] )) {
     $user = $_POST["USER"];
     $target = $_POST["TARGET"];

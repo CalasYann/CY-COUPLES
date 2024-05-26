@@ -1,10 +1,13 @@
-
-
+<?php
+session_start();
+require_once("test_session.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>
 
         <?php
+            
             require_once("list_brawlers.php");
             require_once("list_mode.php");
             require_once("browse_players.php");

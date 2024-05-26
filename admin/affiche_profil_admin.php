@@ -1,10 +1,10 @@
 <?php 
 session_start();
 if (!isset($_SESSION['admin'])) {
-    header('Location: ../pageacceuil.php');
+    header('Location: ../pageacceuil.php?ERROR=admin');//vous n'etes pas admin
 }
 elseif ($_SESSION['admin']!='connected'){
-    header('Location: ../pageacceuil.php');
+    header('Location: ../pageacceuil.php?ERROR=admin');
 }
 
 

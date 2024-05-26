@@ -23,14 +23,14 @@ for ($i = 0; $i < $ban_count; $i++){
 $status = 0;
 foreach($dir as $file ){
     if($file == $email){
-        header("Location:pageacceuil.php");
+        header("Location:pageacceuil.php?ERROR=email");//email déjà utilisé pour un compte.
         exit(0);
     }
 }
 
 $status =  mkdir("./backend/".$_POST["mail"]);
 if ($status == false){
-    header("Location:pageacceuil.php");
+    header("Location:pageacceuil.php?ERROR=profil");//erreur dans la création du dossier.
     exit(0);
 }
 $doubledragon = 1;
@@ -57,7 +57,7 @@ if($doubledragon != false){
     exit(0);
 }
 else{
-    header("Location:pageacceuil.php");
+    header("Location:pageacceuil.php?ERROR=profil");//erreur dans la création du profil.
     exit(0);
 }
 /*$mails = "test2";
