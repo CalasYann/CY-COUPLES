@@ -12,12 +12,30 @@ html, body{
 
 header{
     background-color: black;
+    padding-left: 15%;
+    padding-right: 15%;
     height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
 }
 #navbar{
-    background-color: lightpink;
+    background-color: crimson;
     height: 100%;
     width: 30%;
+}
+
+.conv{
+    height: 80px;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
 }
 
 #chatbox{
@@ -37,27 +55,43 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightcoral;
+    background-color: #25324e;
 }
 
 #textbar{
     width:80%;
+    border-radius: 3px;
 }
 
 #msg_history{
     overflow: scroll;
     height: 90%;
     width: 100%;
-    background-color: goldenrod;
+    background-color: #2c3f66;
 }
 
 #msg_to_user{
     position: relative;
-    left:70%;
+    left:78%;
 }
+
+
 
 .delete{
     width:10px;
     height: 10px;
 
+}
+
+.header_link_div {
+    margin: 15px;
+}
+
+.msg{
+    width:200px;
+    background-color: white;
+    margin-left: 50px;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 20px;
 }
