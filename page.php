@@ -4,7 +4,7 @@
     session_start();
     require_once("test_session.php");
     require_once("bloquer.php");
-
+    require_once("get_abonnement.php");
 
 ?>
 
@@ -22,6 +22,7 @@
             <div id="profile">
 
                 <?php
+                    
                     if (isset($_GET["id"])) {
                         $player_nick = get_player_info($_GET["id"], "PSEUDO");
                         $player_bs = get_player_info($_GET["id"], "BRAWLNAME");
@@ -46,17 +47,22 @@
                 <div id="messagerie_zone">
                     
                     <?php 
-                     if(isblock($_GET["id"])){
-                        echo('<a  href="blocked.php?TARGET='.trim($_GET['id']).'&block=0" >');  
-                        echo('<button id="block">Débloquer</button></a>');
+                    if (trim(abonnement($_SESSION["mail"]))=="rare"){
+                        echo("Abonne toi pour envoyer des messages");
+                    }elseif (trim(abonnement($_GET["id"]))=="rare") {
+                        echo("Cette utilisateur n'a pas d'abonnement");
                     }else{
-                        echo('<a  href="messages.php?TARGET='.trim($_GET['id']).'" >'); 
-                        echo('<button id="mes">messagerie</button></a>');
+                        if(isblock($_GET["id"])){
+                            echo('<a  href="blocked.php?TARGET='.trim($_GET['id']).'&block=0" >');  
+                            echo('<button id="block">Débloquer</button></a>');
+                        }else{
+                            echo('<a  href="messages.php?TARGET='.trim($_GET['id']).'" >'); 
+                            echo('<button id="mes">messagerie</button></a>');
 
-                        echo('<a  href="blocked.php?TARGET='.trim($_GET["id"]).'&block=1" >');   
-                        echo('<button id="block">Bloquer</button></a>');
+                            echo('<a  href="blocked.php?TARGET='.trim($_GET["id"]).'&block=1" >');   
+                            echo('<button id="block">Bloquer</button></a>');
+                        }
                     }
-                    
                     ?>
                 </div>
             </div>
