@@ -32,20 +32,18 @@
                 
                         <a href="deconnect.php"><button class="b1">Se Deconnecter</button></a>
                         </div></p2></br></br>');
+                        if( is_file("./backend/".$_SESSION['mail']."/bio.txt") == false){
+                
+                            echo("<p class='p8' id='pr_msg'>"."<a class='a1' href='page.php?id=".$_SESSION['mail']."'>Complétez votre profil</a> </p></br>");
+                        }
+                           
                     
                 }else{
                     echo('<h3>Vous êtes actuellement sur la page admin du site</h3>');
+                    echo('<a href="admin/recherche_admin.php"><button class="b1">Rechercher des Profils</button></a>');
                 }
             ?>
         
-            <?php
-            if( is_file("./backend/".$_SESSION['mail']."/bio.txt") == false){
-                
-                echo("<p class='p8' id='pr_msg'>"."<a class='a1' href='page.php?id=".$_SESSION['mail']."'>Complétez votre profil</a> </p></br>");
-            }
-                
-
-            ?>
             
         </div>
     </body>
