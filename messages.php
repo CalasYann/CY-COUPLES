@@ -22,7 +22,7 @@
                 $all_conversations = getAllMessageHistory($usr);
                 foreach($all_conversations as $conv){
 
-                    echo(); //ajouter div qui sert de lien vers messages.php
+                    //echo(); //ajouter div qui sert de lien vers messages.php
 
                 }
 

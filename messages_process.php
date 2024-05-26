@@ -80,10 +80,10 @@ function getAllMessageHistory($user){
                 $f1 = $buffer_name[0];
                 $f2 = $buffer_name[1];
                 if ($f1 == $user){
-                    $target ==  $f2;
+                    $target =  $f2;
                 }
                 else{
-                    $target == $f1;
+                    $target = $f1;
                 }
                 $data[$i] = $target;
                 $i++;

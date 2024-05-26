@@ -27,6 +27,7 @@ function get_10_most_recent_users() {
     else{
         while ($j < $lines_number-10) {
             fgets($file);
+            $j++;
         }
         while ($i <10) {
             $users[$i] = explode(":", fgets($file))[1];
