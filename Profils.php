@@ -6,8 +6,15 @@
 	require_once ('define.inc.php');
 	require_once ('fonctionmodif.php');
 	
-
-    if($_GET["error"]==1){
+	?>
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="profil.css">
+    </head>
+    <body>
+		<?php
+	if($_GET["error"]==1){
     	echo("Modification Impossible\n");
     }
 
@@ -19,3 +26,5 @@
 		echo("Petit problème");
 	}
 ?>
+    </body>
+</html>
