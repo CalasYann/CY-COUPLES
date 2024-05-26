@@ -12,11 +12,7 @@ function displayUsers(data){
     for (var i = 0; i<users_count; i++){
         div_element = document.createElement("div");
         div_element.classList.add("player");
-        //div_element.style.background = "grey";
-        /*div_element.style.width = "700px";
-        div_element.style.height = "80px";
-        div_element.style.padding = "15px";
-        div_element.style.margin = "15px";*/
+        
 
         
 
