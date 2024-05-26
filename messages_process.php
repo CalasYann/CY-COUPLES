@@ -11,10 +11,10 @@ function FileName($var1, $var2) {
         $i++;
     }
     if ($var1[$i] > $var2[$i]){
-        $filename = $var2."_".$var1;
+        $filename = $var2.":".$var1;
     }
     else {
-        $filename = $var1."_".$var2;
+        $filename = $var1.":".$var2;
     }
     return $filename;
 }
