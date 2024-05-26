@@ -3,6 +3,8 @@
     require_once("get_user_info.php");
     session_start();
     require_once("test_session.php");
+    require_once("bloquer.php");
+
 
 ?>
 
@@ -38,9 +40,20 @@
 
 
                 <div id="messagerie_zone">
-                    <a  href="messages.php?TARGET=<?php
-                       echo(trim($_GET["id"]));
-                    ?>">   <button id="mes">messagerie</button></a>
+                    
+                    <?php 
+                     if(isblock($_GET["id"])){
+                        echo('<a  href="blocked.php?TARGET='.trim($_GET['id']).'&block=0" >');  
+                        echo('<button id="block">Débloquer</button></a>');
+                    }else{
+                        echo('<a  href="messages.php?TARGET='.trim($_GET['id']).'" >'); 
+                        echo('<button id="mes">messagerie</button></a>');
+
+                        echo('<a  href="blocked.php?TARGET='.trim($_GET["id"]).'&block=1" >');   
+                        echo('<button id="block">Bloquer</button></a>');
+                    }
+                    
+                    ?>
                 </div>
             </div>
 

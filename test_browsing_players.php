@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once("browse_players.php");
 require_once("test_session.php");
 ?>
 <!DOCTYPE html>
@@ -7,7 +7,6 @@ require_once("test_session.php");
     <head>
 
         <?php
-            
             require_once("list_brawlers.php");
             require_once("list_mode.php");
             require_once("browse_players.php");
