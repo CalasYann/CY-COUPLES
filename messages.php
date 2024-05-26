@@ -2,6 +2,7 @@
     session_start();
     require_once("test_session.php");
     require_once("messages_process.php");
+    require_once("get_user_info.php");
 ?>
 
 
@@ -18,13 +19,18 @@
         <div id="main">
             <div id="navbar">
                 <?php
-                $usr = $_SESSION["mail"];
-                $all_conversations = getAllMessageHistory($usr);
-                foreach($all_conversations as $conv){
 
-                    //echo(); //ajouter div qui sert de lien vers messages.php
+                if ($_SESSION['admin'] != "connected"){
+                    $usr = $_SESSION["mail"];
+                    $all_conversations = getAllMessageHistory($usr);
+                    foreach($all_conversations as $conv){
+                        echo("<div><a href='messages.php?TARGET=".$conv."'>".get_player_info($conv, "PSEUDO")."</a></div>");
 
+                    }
                 }
+                elseif ($_SESSION["admin"] == "connected"){
+
+                
 
 
                 ?>

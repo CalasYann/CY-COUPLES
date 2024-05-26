@@ -74,9 +74,9 @@ function getAllMessageHistory($user){
     $dir = new FilesystemIterator(dirname(__FILE__)."/messages");
     $i = 0;
     foreach ($dir as $file) {
-            if (str_contains($file->getFilename(),$user)) {
+            if (str_contains( pathinfo($file->getFilename(), PATHINFO_FILENAME),trim($user))) {
                 //$data[$i] = $file->getFilename();
-                $buffer_name = explode(":", $file->getFilename());
+                $buffer_name = explode("!", pathinfo($file->getFilename(), PATHINFO_FILENAME));
                 $f1 = $buffer_name[0];
                 $f2 = $buffer_name[1];
                 if ($f1 == $user){
@@ -89,6 +89,26 @@ function getAllMessageHistory($user){
                 $i++;
             }
         }
+    return $data;
+}
+
+function AdminGetAllMessageHistory($user){
+    $data = array();
+    $dir = new FilesystemIterator(dirname(__FILE__)."/messages");
+    $i = 0;
+    foreach ($dir as $file) {
+        $buffer_name = explode("!", pathinfo($file->getFilename(), PATHINFO_FILENAME));
+        $f1 = $buffer_name[0];
+        $f2 = $buffer_name[1];
+        if ($f1 == $user){
+            $target = $f2;
+        }
+        else{
+            $target = $f1;
+        }
+        $data[$i] = $target;
+        $i++;
+    }
     return $data;
 }
 
