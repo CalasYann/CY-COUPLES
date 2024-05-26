@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="admin.css">
+    <link rel="stylesheet" type="text/css" href="connect_admin.css">
     <title>Connexion admin</title>
 </head>
 <body>
