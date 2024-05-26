@@ -40,9 +40,24 @@
                            
                     
                 }else{
-                    echo('<h3>Vous êtes actuellement sur la page admin du site</h3>');
-                    echo('<a href="admin/recherche_admin.php?erreur=0"><button class="b1">Rechercher des Profils</button></a>');
-                    echo('<a href="../deconnect.php?id=1"><button class="b1">Se deconnecter</button></a>');
+                    echo('<table class="d1">
+                    <tr>
+	                <th class="e2" width="250"><img src="./Brawlstars.png" /></th>
+                    </tr>
+                    </table>
+                    <p2>
+                    <div class="d6">
+		    </br>
+                    <h4>BIENVENUE !!</h4>
+                    </br>
+                    <h3>Vous êtes actuellement sur la page admin du site</h3></br>
+                    <hr>
+                    </br>
+                    <div class="div1">
+                        </br><div class="div4">
+                    <a href="admin/recherche_admin.php?erreur=0"><button class="b1">Rechercher des Profils</button></a>
+                    <a href="../deconnect.php?id=1"><button class="b1">Se deconnecter</button></a>
+                    </div></p2></br></br></div>');
                 }
             ?>
         
