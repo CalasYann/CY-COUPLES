@@ -17,6 +17,17 @@
         </div>
         <div id="main">
             <div id="navbar">
+                <?php
+                $usr = $_SESSION["mail"];
+                $all_conversations = getAllMessageHistory($usr);
+                foreach($all_conversations as $conv){
+
+                    echo(); //ajouter div qui sert de lien vers messages.php
+
+                }
+
+
+                ?>
                 
 
             </div>
