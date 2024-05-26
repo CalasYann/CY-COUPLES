@@ -9,6 +9,17 @@ $logs = fopen("./backend/logs_register.txt", "a");
 
 $email = $_POST["mail"];
 //$email = "non@gmail.com";
+
+$ban_list = fopen("./backend/ban.txt","r");
+$ban_count = count(file("./backend/ban.txt"));
+for ($i = 0; $i < $ban_count; $i++){
+    $ban_line = fgets($ban_list);
+    $ban_line = trim($ban_line);
+    if ($email == $ban_line){
+        header("Location:pageacceuil.php?ERROR=ban");
+    }
+}
+
 $status = 0;
 foreach($dir as $file ){
     if($file == $email){
