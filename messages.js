@@ -3,6 +3,8 @@ function messageSendBoss(text, user, target){
     getMessageHistory(user, target);
 }
 
+
+
 function MessageHistory(user, target){
     var json_data;
     var number;
@@ -40,6 +42,7 @@ function getMessageHistory(user, target){
 
     xhr.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200){
+            console.log(this.responseText);
 
             json_data = this.responseText;
             data = JSON.parse(json_data);
@@ -59,6 +62,30 @@ function getMessageHistory(user, target){
     return data;
 }
 
+
+function deleteMessage(user, target, msg){
+    console.log("suppression 1");
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function (){
+        if (this.readyState == 4 && this.Status == 200){
+            console.log("suppression");
+            if (this.responseText == "success"){
+                getMessageHistory(user, target);
+            }
+        }
+    }
+
+    params = "USER=" + user;
+    params += "&TARGET=" + target;
+    params +=  "&ID=" + msg.title;
+
+    xhr.open("POST", "message_deletion.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.send(params);
+    
+}
+
 function displayMessages(data, user, target){
     console.log(data);
     console.log("displayMessages");
@@ -66,6 +93,8 @@ function displayMessages(data, user, target){
     console.log(number);
     var container = document.getElementById("msg_history");
     container.innerHTML = "";
+
+    var all_messages = [];
 
     for (var i = 0; i<number; i++){
         console.log("data[i]" + data[i]);
@@ -79,20 +108,45 @@ function displayMessages(data, user, target){
             msg_element.class = "msg";
         }
 
+        msg_element.title = i;
+
         msg_element.innerHTML = data[i]["msg"];
         console.log(msg_element.innerHTML);
         container.appendChild(msg_element);
+
+        if (msg_element.id == "msg_from_user"){
 
         var del_icon = document.createElement("img");
         del_icon.classList.add("delete");
         del_icon.src = "trash-icon.png";
 
-        var del = document.create("a");
-        del.href = "google.com";
+        var cdel = document.createElement("a");
+       //cdel.href = "google.com";
 
-        del.appendChild(del_icon);
-        msg_element.appendChild(del);
+        //cdel.innerText = "<img href='trash-icon.png' class='delete'/>"
+        cdel.appendChild(del_icon);
+        msg_element.appendChild(cdel);
+
+        cdel.title = i;
+
+
+        all_messages[i] = cdel;
+        }
+
+        /*cdel.addEventListener("click", function (){
+            document
+            deleteMessage(user, target, msg_element);
+        })*/
     }
+
+    for (let j = 0 ; j<number; j++){
+        all_messages[j].addEventListener("click", function (){
+            console.log(all_messages[j]);
+            deleteMessage(user, target, all_messages[j].parentNode);
+        });
+    }
+
+    return all_messages;
 }
 
 function send_message(text){

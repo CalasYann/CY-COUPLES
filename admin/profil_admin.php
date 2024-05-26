@@ -50,6 +50,7 @@ require_once('../list_mode.php');
             echo("<a href='recherche_admin.php?erreur=1'><button>Barre de Recherche</button></a>");
             echo("<a href='delete_admin.php'><button>supprimer le compte</button></a>");
             echo("<a href='ban_admin.php'><button>bannir le compte</button></a>");
+            echo("<a href='messages.php'");
         }else{
         
             echo ("<h1> Bienvenue sur votre Porfil </h1> <br>");
