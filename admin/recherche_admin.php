@@ -31,7 +31,7 @@ require_once('display_profil.php');
             display_profil(1);
         ?>
     </datalist>
-    <input type="submit" name="profil_button" value="consulter le profil"/>
+    <input class="b1" type="submit" name="profil_button" value="consulter le profil"/>
     </form> 
     <a href="../hub.php"><button class="b1">Hub</button></a>
 </body>
