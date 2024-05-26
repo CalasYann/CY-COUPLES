@@ -34,7 +34,7 @@
                         </div></p2></br></br>');
                         if( is_file("./backend/".$_SESSION['mail']."/bio.txt") == false){
                 
-                            echo("<p class='p8' id='pr_msg'>"."<a class='a1' href='page.php?id=".$_SESSION['mail']."'>Complétez votre profil</a> </p></br>");
+                            echo("<p class='p8' id='pr_msg'>"."<a class='a1' href='page.php?id=".$_SESSION['mail']."'>Aperçu de mon profil</a> </p></br>");
                         }
                            
                     
