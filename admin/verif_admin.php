@@ -1,6 +1,12 @@
 <?php
 
     session_start();
+    if (!isset($_SESSION['admin'])) {
+        header('Location: ../pageacceuil.php');
+    }
+    elseif ($_SESSION['admin']!='connected'){
+        header('Location: ../pageacceuil.php');
+    }
     $file=file("../backend/admin.txt");
     if(isset($file)){
         $c=$file[0];

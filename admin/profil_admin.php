@@ -47,7 +47,7 @@ require_once('../list_mode.php');
             echo("<h3>Votre Mode Pref :$Mode  </h3> <br>");
             echo("<h3>Mon Abonnement :$Abonnement  </h3> <br>");
             echo("<a href='modif_profil_admin.php'><button> Modif du profil </button></a>");
-            echo("<a href='recherche_admin.php'><button>Barre de Recherche</button></a>");
+            echo("<a href='recherche_admin.php?erreur=1'><button>Barre de Recherche</button></a>");
             echo("<a href='delete_admin.php'><button>supprimer le compte</button></a>");
             echo("<a href='ban_admin.php'><button>bannir le compte</button></a>");
         }else{

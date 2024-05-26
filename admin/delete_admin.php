@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['admin'])) {
+     header('Location: ../pageacceuil.php');
+ }
+ elseif ($_SESSION['admin']!='connected'){
+     header('Location: ../pageacceuil.php');
+ }
 
 
 $file='../backend/'.$_SESSION['mail'].'/private.txt';
@@ -15,6 +21,6 @@ rmdir('../backend/'.$_SESSION['mail']);
 
 $_SESSION["mail"]=1;
 
-header("Location: recherche_admin.php");
+header("Location: recherche_admin.php?erreur==0");
 
 ?>
